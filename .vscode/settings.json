@@ -1,0 +1,10 @@
+{
+  "editor.formatOnSave": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "css.validate": false,
+  "editor.inlineSuggest.enabled": true,
+  "files.autoSave": "afterDelay",
+  "liveServer.settings.CustomBrowser": "chrome"
+}
