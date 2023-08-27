@@ -7,7 +7,11 @@ module.exports = {
     "!./node_modules",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "myspace-blue": "#6699cc",
+      },
+    },
   },
   plugins: [],
 };
