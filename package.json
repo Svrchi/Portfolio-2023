@@ -9,11 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@motionone/utils": "^10.15.1",
+    "@next/font": "^13.4.19",
     "@types/node": "20.4.6",
     "@types/react": "18.2.18",
     "@types/react-dom": "18.2.7",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
+    "feather-icons": "^4.29.1",
     "framer-motion": "^10.15.2",
     "moment": "^2.29.4",
     "next": "13.4.12",
@@ -24,6 +27,7 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@types/feather-icons": "^4.29.1",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.27",
     "tailwindcss": "^3.3.3"

@@ -8,8 +8,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        'Syne': ['Syne']
+      },
       colors: {
         "myspace-blue": "#6699cc",
+        "myspace-blue-two":"#b1d0f0",
+        "myspace-general-blue":"#4171a2",
+        "myspace-header-blue":"#003399",
+        "myspace-orange":"#ffcc99",
+        "myspace-font-orange":"#ff6705",
       },
     },
   },

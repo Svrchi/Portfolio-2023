@@ -4,13 +4,13 @@ import Link from "next/link";
 import moment from "moment";
 
 type Props = {};
-const firstDateOfMonth = moment().startOf("month").format("MM-DD-YYYY");
+// const firstDateOfMonth = moment().startOf("month").format("MM-DD-YYYY");
 const currentDate = moment().subtract(10, "days").calendar();
 const titleCard = (props: Props) => {
   return (
     <div className="flex flex-row text-black">
       <div id="left-col">
-        <p>Kevin Sarchi</p>
+        <p className="font-bold">Kevin Sarchi</p>
         <Image
           className="relative mx-auto object-cover"
           src="/Tom.jpeg"
