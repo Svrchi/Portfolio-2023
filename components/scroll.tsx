@@ -63,7 +63,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
    * dynamically generated number of children.
    */
   return (
-    <div className="overflow-hidden tracking-[-2px] leading-snug m-0 whitespace-nowrap flex flex-nowrap">
+    <div className="overflow-hidden tracking-[-2px] leading-snug m-0 whitespace-nowrap flex flex-nowrap text-black">
       <motion.div
         className="uppercase text-7xl flex whitespace-nowrap flex-nowrap font-extrabold font-Syne"
         style={{ x }}
@@ -80,9 +80,9 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 
 export default function scroll() {
   return (
-    <div className="h-screen pt-[85vh] pb-[85vh] relative  bg-myspace-header-blue ">
-      <ParallaxText  baseVelocity={-5}>Welcome {" "}</ParallaxText>
-      <ParallaxText baseVelocity={5}>Hello</ParallaxText>
+    <div className="h-screen pt-[85vh] pb-[85vh] relative bg-yellow-400 ">
+      <ParallaxText  baseVelocity={3}>UNDER CONSTRUCTION</ParallaxText>
+      {/* <ParallaxText baseVelocity={-3}>{"///>>>///"}</ParallaxText> */}
     </div>
   );
 }

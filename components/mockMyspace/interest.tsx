@@ -5,7 +5,7 @@ type Props = {};
 
 const interest = (props: Props) => {
   return (
-    <div className="border-myspace-blue border-2 w-2/3 flex flex-col h-2/5 justify-start ">
+    <div className="border-myspace-blue border-2 w-5/6 flex flex-col h-2/5 justify-start ">
       <div className="bg-myspace-blue w-full ">
         <p className="text-white ">Kevin's Interest</p>
       </div>

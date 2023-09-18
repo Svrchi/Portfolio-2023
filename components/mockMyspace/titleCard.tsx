@@ -8,7 +8,7 @@ type Props = {};
 const currentDate = moment().subtract(10, "days").calendar();
 const titleCard = (props: Props) => {
   return (
-    <div className="flex flex-row text-black">
+    <div className="flex flex-row text-black w-5/6 ">
       <div id="left-col">
         <p className="font-bold">Kevin Sarchi</p>
         <Image
@@ -18,7 +18,7 @@ const titleCard = (props: Props) => {
           height={0}
           alt="selfie"
         />
-        <div className="flex">
+        <div className="flex border">
           <p> View My: </p>
           <Link href="https://www.flickr.com/photos/100852839@N04/">Pics</Link>
           <p>|</p>
