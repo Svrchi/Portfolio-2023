@@ -12,9 +12,9 @@ const contact = (props: Props) => {
       <div className="bg-myspace-blue h-48} ">
         <p className="text-white font-bold pl-5 ">Contacting Kevin</p>{" "}
       </div>
-      <div className="flex relative font-Pixel w-full h-full max-h-[85%] border top-0 left-0">
+      <div className="flex relative font-Pixel w-full h-full max-h-[85%]  top-0 left-0">
         {/* ////////////////////////////LEFT SPAN //////////////////////////////////////////// */}
-        <span className=" flex flex-col justify-around w-1/2 absolute border h-full ">
+        <span className=" flex flex-col justify-around w-1/2 absolute  h-full ">
           <div className="flex ml-4 items-center ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +106,7 @@ const contact = (props: Props) => {
           </div>
         </span>
         {/* ////////////////////////////// RIGHT SPAN ////////////////////////////////////////// */}
-        <span className="w-1/2 h-full absolute border  "></span>
+        <span className="w-1/2 h-full absolute"></span>
       </div>
     </div>
   );

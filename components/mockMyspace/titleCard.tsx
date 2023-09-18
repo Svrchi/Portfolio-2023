@@ -8,7 +8,7 @@ type Props = {};
 const currentDate = moment().subtract(10, "days").calendar();
 const titleCard = (props: Props) => {
   return (
-    <div className="flex flex-row text-black w-5/6 ">
+    <div className="flex  text-black w-5/6  ">
       <div id="left-col">
         <p className="font-bold">Kevin Sarchi</p>
         <Image
@@ -18,28 +18,32 @@ const titleCard = (props: Props) => {
           height={0}
           alt="selfie"
         />
-        <div className="flex border">
+        <div className="flex  mt-3 text-xs justify-center">
           <p> View My: </p>
-          <Link href="https://www.flickr.com/photos/100852839@N04/">Pics</Link>
-          <p>|</p>
-          <Link href="https://www.flickr.com/photos/100852839@N04/">
+          <Link className="text-blue-900 font-extrabold" href="https://www.flickr.com/photos/100852839@N04/">Pics</Link>
+          <p> {' '}|{' '} </p>
+          <Link className="text-blue-900 font-extrabold" href="https://www.flickr.com/photos/100852839@N04/">
             Videos
           </Link>
         </div>
       </div>
-      <div id="right-col">
-        <p> &quot; :-{`)`} &quot; </p>
-        <p>29 years old</p>
-        <p> New York,</p>
-        <p>NEW YORK</p>
-        <p>United States</p>
+      <div id="right-col" className="ml-3 text-sm">
+        <p className="mb-4 mt-4"> &quot; :-{`)`} &quot; </p>
+        <div className="mb-5 leading-3">
+          <p>29 years old</p>
+          <p> New York,</p>
+          <p>NEW YORK</p>
+          <p>United States</p>
+        </div>
         <img
-        className="h-7"
+          className="h-7 mt-4 mb-4"
           alt="Online Icon"
           src="https://archive.org/download/myspaceon/myspaceon.gif"
         />
-        <p>Last Login:</p>
-        <p>{currentDate}</p>
+        <div className=" leading-[13px] text-sm">
+          <p>Last Login:</p>
+          <p>{currentDate}</p>
+        </div>
       </div>
     </div>
   );
