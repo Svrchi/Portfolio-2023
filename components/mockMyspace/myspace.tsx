@@ -21,7 +21,7 @@ const myspace = (props: Props) => {
       <LinkedinURL />
       <Interest />
     </div>
-    <div id="column-2" className="border h-screen w-7/12 flex flex-col justify-evenly pt-6 pb-12">
+    <div id="column-2" className="border h-screen w-7/12 flex flex-col justify-start  pb-12">
       <AboutMe />
       <TopSkills/>
     </div>

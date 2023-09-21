@@ -11,10 +11,11 @@ const titleCard = (props: Props) => {
     <div className="flex  text-black w-5/6  ">
       <div id="left-col">
         <p className="font-bold">Kevin Sarchi</p>
+        {/* NEEDS WIDER PHOTO TO BALANCE SPACING */}
         <Image
-          className="relative mx-auto object-cover"
-          src="/Tom.jpeg"
-          width={150}
+          className="relative mx-auto object-cover "
+          src="/tempselfie.jpeg"
+          width={180}
           height={0}
           alt="selfie"
         />
@@ -36,7 +37,7 @@ const titleCard = (props: Props) => {
           <p>United States</p>
         </div>
         <img
-          className="h-7 mt-4 mb-4"
+          className="h-7 w- mt-4 mb-4"
           alt="Online Icon"
           src="https://archive.org/download/myspaceon/myspaceon.gif"
         />
