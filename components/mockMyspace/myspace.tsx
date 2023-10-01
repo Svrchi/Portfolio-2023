@@ -1,33 +1,95 @@
-import React from 'react'
-import LinkedinURL from "../../components/mockMyspace/linkedinURL";
-import Interest from "../../components/mockMyspace/interest";
-import AboutMe from "../../components/mockMyspace/aboutMe";
-import TopSkills from "../../components/mockMyspace/topSkills";
-import TitleCard from "../../components/mockMyspace/titleCard";
-import Contact from "../../components/mockMyspace/contact";
+import React, { useEffect, useState } from 'react';
+import LinkedinURL from './linkedinURL';
+import Interest from './interest';
+import AboutMe from './aboutMe';
+import TopSkills from './topSkills';
+import TitleCard from './titleCard';
+import Contact from './Contact';
+import ContactForm from './ContactForm';
 
-type Props = {}
+type Props = {};
 
-const myspace = (props: Props) => {
-  return (
-    <div className='bg-gray-200 h-screen w-screen flex justify-center'>
-    <div className="h-screen max-w-screen-lg bg-white flex ">
-    <div
-      id="column-1"
-      className="border h-screen w-5/12 flex flex-col items-center justify-evenly pt-12 min-w-[450px] "
-    >
-      <TitleCard />
-      <Contact />
-      <LinkedinURL />
-      <Interest />
-    </div>
-    <div id="column-2" className="border h-screen w-7/12 flex flex-col justify-start  pb-12">
-      <AboutMe />
-      <TopSkills/>
-    </div>
-  </div>
-  </div>
-  )
+
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height,
+  };
 }
 
-export default myspace
+function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowDimensions;
+}
+
+// const { height, width } = useWindowDimensions();
+
+const Myspace: React.FC = (props: Props) => {
+  const [showContactForm, SetShowContactForm] = useState(false);
+
+  const toggleForm = () => {
+    console.log(showContactForm);
+    showContactForm ? SetShowContactForm(false) : SetShowContactForm(true);
+  };
+  // Have to resolve issue with window
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  // const { height, width } = useWindowDimensions();
+  // console.log(height)
+  //   console.log(width)
+
+  // if (width < 600){
+  //   return (
+  //     <div>
+  //       test
+  //     </div>
+
+  //   )
+  // }
+
+  if (showContactForm) {
+    return (
+      <div className='h-screen w-screen bg-opacity-25 bg-slate-500 absolute z-30 bottom-1/4 left-2/4 '>
+    <ContactForm />
+    </div>
+    );
+  }
+
+  return (
+    <div className='flex h-screen w-screen justify-center border-2 bg-gray-200'>
+      <div className='flex h-screen max-w-screen-lg bg-white '>
+        <div
+          id='column-1'
+          className='flex h-screen w-5/12 min-w-[450px] flex-col items-center justify-evenly border pt-12 '
+        >
+          <TitleCard />
+          <Contact toggleForm={toggleForm} />
+          <LinkedinURL />
+          <Interest />
+        </div>
+        <div
+          id='column-2'
+          className='hidden h-screen w-7/12 justify-start border pb-12 md:flex md:flex-col'
+        >
+          <AboutMe />
+          <TopSkills />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Myspace;

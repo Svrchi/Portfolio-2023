@@ -1,28 +1,30 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
+import React from 'react';
 
 type Props = {};
 
 const interest = (props: Props) => {
   return (
-    <div className="border-myspace-blue border-2 w-5/6 flex flex-col h-2/5 justify-start ">
-      <div className="bg-myspace-blue w-full ">
-        <p className="text-white ">Kevin's Interest</p>
+    <div className='flex h-2/5 w-5/6 flex-col justify-start border-2 border-myspace-blue '>
+      <div className='w-full bg-myspace-blue '>
+        <p className='text-white '>Kevin's Interest</p>
       </div>
-      <div className="flex m-0.5 h-1/2">
-        <div className="bg-blue-500 text-blue-800 font-semibold w-1/3 mr-1 ">General</div>
-        <div className="bg-blue-200 text-black w-2/3 text-xs">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-          eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis. Non
-          enim praesent elementum facilisis leo vel fringilla est. Lorem donec
-          massa sapien faucibus. Aliquam sem et tortor consequat id porta nibh
-          venenatis.
+      <div className='m-0.5 flex h-1/2'>
+        <div className='mr-1 w-1/3 bg-blue-500 pl-1 font-semibold text-blue-800'>
+          General
+        </div>
+        <div className='w-2/3 bg-blue-200 pl-1 text-xs leading-5 text-black'>
+          Internet, Movies, Reading, Dancing, Karaoke, Baseball, Language,
+          Culture, History of Communism, Philosophy, Singing/Writing Music,
+          Running, Finding New Food, Weight Lifting, Hiking, WWI Aviation,
+          Travel, Building alternate communities
         </div>
       </div>
-      <div className="flex h-1/2 overflow-clip m-0.5 mt-0">
-        <div className="bg-blue-500 text-blue-800 font-semibold w-1/3 mr-1 ">Music</div>
-        <div className="bg-blue-200 text-black w-2/3 text-xs ">
+      <div className='m-0.5 mt-0 flex h-1/2 overflow-clip'>
+        <div className='mr-1 w-1/3 bg-blue-500 pl-1 font-semibold text-blue-800'>
+          Music
+        </div>
+        <div className='w-2/3 overflow-scroll bg-blue-200 text-xs text-black'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
           eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis. Non

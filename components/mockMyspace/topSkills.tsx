@@ -1,105 +1,106 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
 
 type Props = {};
 
 const topSkills = (props: Props) => {
   return (
-    <div className="flex flex-col w-11/12 h-2/5 mt-5">
-      <p className="text-myspace-font-orange bg-myspace-orange pl-2 font-medium">
+    <div className='min-h-2/5 max-h-2/5 mt-5 flex w-11/12 flex-col'>
+      <p className='bg-myspace-orange pl-2 font-medium text-myspace-font-orange'>
         Kevin's Skill Space
       </p>
 
       {/* skill container */}
-      <div className=" h-full flex flex-col">
+      <div className=' flex h-full flex-col'>
         {/* first row */}
-        <div className="h-1/2  flex items-center">
-          <div className="flex flex-col justify-center items-center h-36 w-36 border">
-            <p className="text-black">React</p>
+        <div className='flex h-1/2 items-center'>
+          <div className='flex h-36 w-36 flex-col items-center justify-center border'>
+            <p className='text-black'>React</p>
             <Image
-              className=""
-              src="/React-icon.png"
+              className=''
+              src='/React-icon.png'
               width={100}
               height={100}
-              alt="react"
+              alt='React Logo'
             />
           </div>
-          <div className="flex flex-col justify-center items-center h-36 w-36 border">
-            <p className="text-black">React</p>
+          <div className='flex h-36 w-36 flex-col items-center justify-center border'>
+            <p className='text-black'>TypeScript</p>
             <Image
-              className=""
-              src="/React-icon.png"
+              className=''
+              src='/Typescript-logo.jpeg'
               width={100}
               height={100}
-              alt="react"
+              alt='TypeScript logo'
             />
           </div>
-          <div className="flex flex-col justify-center items-center h-36 w-36 border">
-            <p className="text-black">React</p>
+          <div className='flex h-36 w-36 flex-col items-center justify-center border'>
+            <p className='text-black'>Storybook</p>
             <Image
-              className=""
-              src="/React-icon.png"
+              className=''
+              src='/storybook-logo.png'
               width={100}
               height={100}
-              alt="react"
+              alt='Storybook logo'
             />
           </div>
-          <div className="flex flex-col justify-center items-center h-36 w-36 border">
-            <p className="text-black">React</p>
+          <div className='flex h-36 w-36 flex-col items-center justify-center border'>
+            <p className='text-black'>GraphQL</p>
             <Image
-              className=""
-              src="/React-icon.png"
+              className=''
+              src='/GraphQL-logo.png'
               width={100}
               height={100}
-              alt="react"
+              alt='GraphQL Logo'
             />
           </div>
         </div>
         {/* second row */}
-        <div className="h-1/2 border flex items-center">
-        <div className="flex flex-col justify-center items-center h-36 w-36 border">
-            <p className="text-black">React</p>
+        <div className='flex h-1/2 items-center border'>
+          <div className='flex h-36 w-36 flex-col items-center justify-center border'>
+            <p className='text-black'>Svelte</p>
             <Image
-              className=""
-              src="/React-icon.png"
-              width={100}
-              height={100}
-              alt="react"
+              className=''
+              src='/Svelte_logo.png'
+              width={80}
+              height={0}
+              alt='Svelte Logo'
             />
           </div>
-          <div className="flex flex-col justify-center items-center h-36 w-36 border">
-            <p className="text-black">React</p>
+          <div className='flex h-36 w-36 flex-col items-center justify-center border'>
+            <p className='text-black'>Next</p>
             <Image
-              className=""
-              src="/React-icon.png"
+              className=''
+              src='/nextjs-icon.png'
               width={100}
               height={100}
-              alt="react"
+              alt='Next.js Logo'
             />
           </div>
-          <div className="flex flex-col justify-center items-center h-36 w-36 border">
-            <p className="text-black">React</p>
+          <div className='flex h-36 w-36 flex-col items-center justify-center border'>
+            <p className='text-black'>React</p>
             <Image
-              className=""
-              src="/React-icon.png"
+              className=''
+              src='/React-icon.png'
               width={100}
               height={100}
-              alt="react"
+              alt='react'
             />
           </div>
-          <div className="flex flex-col justify-center items-center h-36 w-36 border">
-            <p className="text-black">React</p>
+          <div className='flex h-36 w-36 flex-col items-center justify-center border'>
+            <p className='text-black'>Figma</p>
             <Image
-              className=""
-              src="/React-icon.png"
-              width={100}
-              height={100}
-              alt="react"
+              className=''
+              src='/Figma-logo.png'
+              width={60}
+              height={0}
+              alt='Figma logo'
             />
           </div>
         </div>
       </div>
+      <p className='text-black'>more</p>
     </div>
   );
 };

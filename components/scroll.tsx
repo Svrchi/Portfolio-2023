@@ -1,5 +1,5 @@
 // import "../src/styles/styles.css";
-import { useRef } from "react";
+import { useRef } from 'react';
 import {
   motion,
   useScroll,
@@ -8,9 +8,9 @@ import {
   useMotionValue,
   useVelocity,
   useAnimationFrame,
-} from "framer-motion";
-import { wrap } from "@motionone/utils";
-import { Syne } from "next/font/google";
+} from 'framer-motion';
+import { wrap } from '@motionone/utils';
+  
 
 interface ParallaxProps {
   children: string;
@@ -63,25 +63,26 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
    * dynamically generated number of children.
    */
   return (
-    <div className="overflow-hidden tracking-[-2px] leading-snug m-0 whitespace-nowrap flex flex-nowrap text-black">
+    <div className='m-0 flex flex-nowrap overflow-hidden whitespace-nowrap leading-snug tracking-[-2px] text-black'>
       <motion.div
-        className="uppercase text-7xl flex whitespace-nowrap flex-nowrap font-extrabold font-Syne"
+        className='flex flex-nowrap whitespace-nowrap font-Syne text-7xl font-extrabold uppercase'
         style={{ x }}
       >
-        <span className="">{children} </span>
-        <span className="block mr-32 from-neutral-100">{children} </span>
-        <span className="block mr-32">{children} </span>
-        <span className="block mr-32">{children} </span>
-        <span className="block mr-32">{children} </span>
+        <span className=''>{children} </span>
+        <span className='mr-32 block from-neutral-100 text-white'>{children} </span>
+        <span className='mr-32 block text-white'>{children} </span>
+        <span className='mr-32 block text-white'>{children} </span>
+        <span className='mr-32 block text-white'>{children} </span>
       </motion.div>
     </div>
   );
 }
 
+
 export default function scroll() {
   return (
-    <div className="h-screen pt-[85vh] pb-[85vh] relative bg-yellow-400 ">
-      <ParallaxText  baseVelocity={3}>UNDER CONSTRUCTION</ParallaxText>
+    <div className='relative h-screen bg-myspace-header-blue pb-[85vh] pt-[85vh]'>
+      <ParallaxText baseVelocity={3}>UNDER CONSTRUCTION</ParallaxText>
       {/* <ParallaxText baseVelocity={-3}>{"///>>>///"}</ParallaxText> */}
     </div>
   );

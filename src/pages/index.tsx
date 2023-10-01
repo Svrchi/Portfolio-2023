@@ -1,23 +1,24 @@
-import Head from "next/head";
-import { Inter } from "next/font/google";
-import Header from "../../components/header";
-import Hero from "../../components/hero";
-import About from "../../components/about";
-import Experience from "../../components/experience";
-import TitleCard from "../../components/mockMyspace/titleCard";
-import Contact from "../../components/mockMyspace/contact";
-import Scroll from "../../components/scroll";
-import LinkedinURL from "../../components/mockMyspace/linkedinURL";
-import Interest from "../../components/mockMyspace/interest";
-import AboutMe from "../../components/mockMyspace/aboutMe";
-import TopSkills from "../../components/mockMyspace/topSkills";
-import Myspace from "../../components/mockMyspace/myspace";
+import Head from 'next/head';
+import { Inter } from 'next/font/google';
+import Header from '../../components/header';
+import Hero from '../../components/hero';
+import About from '../../components/about';
+import Experience from '../../components/experience';
+import TitleCard from '../../components/mockMyspace/titleCard';
+import Contact from '../../components/mockMyspace/Contact';
+import Scroll from '../../components/scroll';
+import LinkedinURL from '../../components/mockMyspace/linkedinURL';
+import Interest from '../../components/mockMyspace/interest';
+import AboutMe from '../../components/mockMyspace/aboutMe';
+import TopSkills from '../../components/mockMyspace/topSkills';
+import Myspace from '../../components/mockMyspace/Myspace';
+import ContactForm from '../../components/mockMyspace/ContactForm';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (
-    <div className="bg-gray-700 text-white h-screen snap-y snap-mandatory overflow-scroll z-0">
+    <div className='z-0 h-screen snap-y snap-mandatory overflow-scroll bg-gray-700 text-white'>
       <Head>
         <title>Sarchi</title>
       </Head>
@@ -33,12 +34,17 @@ export default function Home() {
       </section> */}
 
       {/* scroll screen */}
-      <section id="scroll" className="snap-start ">
+      <section id='scroll' className='snap-start '>
         <Scroll />
       </section>
       {/* myspace test page */}
-      <section id="myspace1" className="snap-center">
+      <section id='myspace1' className='snap-center'>
         <Myspace />
+      </section>
+      <section id='contact-form' className='snap-center'>
+        <div className='flex h-screen items-center justify-center bg-white'>
+          <ContactForm />
+        </div>
       </section>
     </div>
   );
