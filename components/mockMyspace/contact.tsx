@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import ContactForm from './ContactForm';
 
-
 interface Props {
   toggleForm: () => void;
 }

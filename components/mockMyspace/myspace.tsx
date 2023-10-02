@@ -6,9 +6,10 @@ import TopSkills from './topSkills';
 import TitleCard from './titleCard';
 import Contact from './Contact';
 import ContactForm from './ContactForm';
+import { motion } from 'framer-motion';
+
 
 type Props = {};
-
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
@@ -38,11 +39,11 @@ function useWindowDimensions() {
 // const { height, width } = useWindowDimensions();
 
 const Myspace: React.FC = (props: Props) => {
-  const [showContactForm, SetShowContactForm] = useState(false);
+  const [showContactForm, setShowContactForm] = useState(false);
 
   const toggleForm = () => {
     console.log(showContactForm);
-    showContactForm ? SetShowContactForm(false) : SetShowContactForm(true);
+    setShowContactForm(!showContactForm);
   };
   // Have to resolve issue with window
 
@@ -60,13 +61,7 @@ const Myspace: React.FC = (props: Props) => {
   //   )
   // }
 
-  if (showContactForm) {
-    return (
-      <div className='h-screen w-screen bg-opacity-25 bg-slate-500 absolute z-30 bottom-1/4 left-2/4 '>
-    <ContactForm />
-    </div>
-    );
-  }
+ 
 
   return (
     <div className='flex h-screen w-screen justify-center border-2 bg-gray-200'>
@@ -77,6 +72,17 @@ const Myspace: React.FC = (props: Props) => {
         >
           <TitleCard />
           <Contact toggleForm={toggleForm} />
+          {showContactForm && (
+            <motion.div 
+            className='absolute left-0 top-12 z-20 flex h-screen w-screen items-center justify-center'
+            initial={{ y: -100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            >
+              <ContactForm toggleForm={toggleForm} />{' '}
+            </motion.div>
+          )}
           <LinkedinURL />
           <Interest />
         </div>

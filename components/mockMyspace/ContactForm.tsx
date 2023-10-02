@@ -9,17 +9,26 @@ type Inputs = {
   message: string;
 };
 
-type Props = {};
+interface Props {
+  toggleForm: () => void;
+}
 
-const ContactForm = (props: Props) => {
+//   : React.FC<Props> = ({ toggleForm })
+const ContactForm: React.FC<Props> = ({ toggleForm }) => {
   const { register, handleSubmit } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    console.log(formData)
+    console.log(formData);
   };
 
   return (
-    <div className=' flex h-[429px] w-[337px] flex-col items-center justify-evenly rounded-xl bg-myspace-header-blue'>
+    <div className=' flex h-[429px] w-[337px] flex-col items-center justify-evenly rounded-xl bg-myspace-header-blue opacity-100' >
+      <button
+        className='relative hover:bg-slate-400  h-fit w-6 bg-black'
+        onClick={toggleForm}
+      >
+        x
+      </button>
       <Image
         className=''
         src='/Myspace.png'
@@ -27,9 +36,7 @@ const ContactForm = (props: Props) => {
         height={70}
         alt='Myspace logo'
       />
-      {/* <div className='h-2 w-2 relative -left-36 -top-20 rounded-full bg-white'>
 
-      </div> */}
       <form
         className='flex  h-[290px] w-[271px] flex-col items-center justify-between '
         onSubmit={handleSubmit(onSubmit)}

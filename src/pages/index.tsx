@@ -23,7 +23,7 @@ export default function Home() {
         <title>Sarchi</title>
       </Head>
       <Header />
-      {/* <section id="hero" className="snap-center">
+      <section id="hero" className="snap-center">
         <Hero />
       </section>
       <section id="about" className="snap-center">
@@ -31,7 +31,7 @@ export default function Home() {
       </section>
       <section id="experience" className="snap-center">
         <Experience />
-      </section> */}
+      </section>
 
       {/* scroll screen */}
       <section id='scroll' className='snap-start '>

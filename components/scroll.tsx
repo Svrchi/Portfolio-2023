@@ -10,7 +10,6 @@ import {
   useAnimationFrame,
 } from 'framer-motion';
 import { wrap } from '@motionone/utils';
-  
 
 interface ParallaxProps {
   children: string;
@@ -69,7 +68,9 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
         style={{ x }}
       >
         <span className=''>{children} </span>
-        <span className='mr-32 block from-neutral-100 text-white'>{children} </span>
+        <span className='mr-32 block from-neutral-100 text-white'>
+          {children}{' '}
+        </span>
         <span className='mr-32 block text-white'>{children} </span>
         <span className='mr-32 block text-white'>{children} </span>
         <span className='mr-32 block text-white'>{children} </span>
@@ -77,7 +78,6 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
     </div>
   );
 }
-
 
 export default function scroll() {
   return (
