@@ -8,7 +8,6 @@ import Contact from './Contact';
 import ContactForm from './ContactForm';
 import { motion } from 'framer-motion';
 
-
 type Props = {};
 
 function getWindowDimensions() {
@@ -61,25 +60,29 @@ const Myspace: React.FC = (props: Props) => {
   //   )
   // }
 
- 
-
   return (
-    <div className='flex h-screen w-screen justify-center border-2 bg-gray-200'>
+    <div className='flex h-screen w-screen justify-center bg-gray-200'>
       <div className='flex h-screen max-w-screen-lg bg-white '>
         <div
           id='column-1'
-          className='flex h-screen w-5/12 min-w-[450px] flex-col items-center justify-evenly border pt-12 '
+          className='flex h-screen w-5/12 min-w-[450px] flex-col items-center justify-evenly pt-12 '
         >
           <TitleCard />
           <Contact toggleForm={toggleForm} />
           {showContactForm && (
-            <motion.div 
-            className='absolute left-0 top-12 z-20 flex h-screen w-screen items-center justify-center'
-            initial={{ y: -100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-            >
+            <motion.div
+              className='absolute left-0 top-12 z-20 flex h-screen w-screen items-center justify-center'
+              initial={{ y: -100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+                        >
+              {/* <button
+                className='absolute  h-fit w-6 bg-black hover:bg-slate-400 top-[200px] right-[395px]'
+                onClick={toggleForm}
+              >
+                x
+              </button> */}
               <ContactForm toggleForm={toggleForm} />{' '}
             </motion.div>
           )}
@@ -88,7 +91,7 @@ const Myspace: React.FC = (props: Props) => {
         </div>
         <div
           id='column-2'
-          className='hidden h-screen w-7/12 justify-start border pb-12 md:flex md:flex-col'
+          className='hidden h-screen w-7/12 justify-start border-l-2 pb-12 md:flex md:flex-col'
         >
           <AboutMe />
           <TopSkills />

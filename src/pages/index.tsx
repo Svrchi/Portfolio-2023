@@ -23,13 +23,13 @@ export default function Home() {
         <title>Sarchi</title>
       </Head>
       <Header />
-      <section id="hero" className="snap-center">
+      <section id='hero' className='snap-center'>
         <Hero />
       </section>
-      <section id="about" className="snap-center">
+      <section id='about' className='snap-center'>
         <About />
       </section>
-      <section id="experience" className="snap-center">
+      <section id='experience' className='snap-center'>
         <Experience />
       </section>
 
@@ -40,11 +40,6 @@ export default function Home() {
       {/* myspace test page */}
       <section id='myspace1' className='snap-center'>
         <Myspace />
-      </section>
-      <section id='contact-form' className='snap-center'>
-        <div className='flex h-screen items-center justify-center bg-white'>
-          <ContactForm />
-        </div>
       </section>
     </div>
   );

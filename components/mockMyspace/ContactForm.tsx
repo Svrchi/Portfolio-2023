@@ -22,45 +22,47 @@ const ContactForm: React.FC<Props> = ({ toggleForm }) => {
   };
 
   return (
-    <div className=' flex h-[429px] w-[337px] flex-col items-center justify-evenly rounded-xl bg-myspace-header-blue opacity-100' >
-      <button
-        className='relative hover:bg-slate-400  h-fit w-6 bg-black'
+    <div className=' flex h-[429px] w-[337px] flex-col items-center justify-evenly rounded-xl bg-myspace-header-blue opacity-100 '>
+      <div className='flex w-full justify-center'>
+        <Image
+          className='relative left-2'
+          src='/Myspace.png'
+          width={70}
+          height={70}
+          alt='Myspace logo'
+        />
+        <button
+        className=' relative h-fit w-fit font-extrabold left-[120px] -top-[20px] hover:text-gray-400 active:text-gray-900'
         onClick={toggleForm}
+        
       >
-        x
+        X
       </button>
-      <Image
-        className=''
-        src='/Myspace.png'
-        width={70}
-        height={70}
-        alt='Myspace logo'
-      />
-
+      </div>
       <form
-        className='flex  h-[290px] w-[271px] flex-col items-center justify-between '
+        className='flex  h-[290px] w-[271px] flex-col items-center justify-between'
         onSubmit={handleSubmit(onSubmit)}
       >
         <input
-          className='h-[32px] w-[271px] rounded-md border-2  border-gray-300 pl-1  text-black'
+          className='h-[32px] w-[271px] rounded-md border-2  border-gray-300 pl-1  text-black focus:outline-myspace-font-orange'
           type='text'
           placeholder='Name'
           {...register('name')}
         />
         <input
-          className='h-[32px] w-[271px] rounded-md border-2  border-gray-300 pl-1  text-black'
+          className='h-[32px] w-[271px] rounded-md border-2  border-gray-300 pl-1  text-black focus:outline-myspace-font-orange'
           type='email'
           placeholder='Email'
           {...register('email')}
         />
         <input
-          className='h-[32px] w-[271px] rounded-md border-2 border-gray-300 pl-1 text-black'
+          className='h-[32px] w-[271px] rounded-md border-2 border-gray-300 pl-1 text-black focus:outline-myspace-font-orange'
           type='text'
           placeholder='Subject'
           {...register('subject')}
         />
         <textarea
-          className='h-[100px] w-[271px] rounded-md border-2 border-gray-300 pl-1 text-black '
+          className='h-[100px] w-[271px] rounded-md border-2 border-gray-300 pl-1 text-black focus:outline-myspace-font-orange'
           placeholder='Message'
           {...register('message')}
         />
@@ -69,6 +71,7 @@ const ContactForm: React.FC<Props> = ({ toggleForm }) => {
           className='h-[32px] w-[132px] rounded-md bg-myspace-font-orange text-white hover:bg-orange-600 focus:bg-myspace-blue '
           type='submit'
           value='SUBMIT'
+          onClick={toggleForm}
         >
           SUBMIT
         </button>
