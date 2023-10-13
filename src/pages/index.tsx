@@ -13,6 +13,7 @@ import AboutMe from '../../components/mockMyspace/aboutMe';
 import TopSkills from '../../components/mockMyspace/topSkills';
 import Myspace from '../../components/mockMyspace/Myspace';
 import ContactForm from '../../components/mockMyspace/ContactForm';
+import { motion } from 'framer-motion';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -23,7 +24,7 @@ export default function Home() {
         <title>Sarchi</title>
       </Head>
       <Header />
-      <section id='hero' className='snap-center'>
+      {/* <section id='hero' className='snap-center'>
         <Hero />
       </section>
       <section id='about' className='snap-center'>
@@ -31,16 +32,19 @@ export default function Home() {
       </section>
       <section id='experience' className='snap-center'>
         <Experience />
-      </section>
+      </section> */}
 
       {/* scroll screen */}
       <section id='scroll' className='snap-start '>
         <Scroll />
       </section>
       {/* myspace test page */}
-      <section id='myspace1' className='snap-center'>
+      <motion.section id='myspace1' className='snap-center'    initial={{  opacity: 0 }}      whileInView={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+        // viewport={{ once: true }}
+        >
         <Myspace />
-      </section>
+      </motion.section>
     </div>
   );
 }

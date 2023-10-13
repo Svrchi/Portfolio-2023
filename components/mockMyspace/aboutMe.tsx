@@ -4,14 +4,16 @@ import React from 'react';
 const aboutMe = () => {
   return (
     <div className='mt-6 flex h-1/2 w-11/12 flex-col justify-evenly border border-red-500'>
-      <div className='flex h-[80px] items-center justify-center border-2 border-black font-black'>
+      <div className='flex min-h-[80px] items-center justify-center border-2 border-black font-black'>
         <p className='text-black'>Kevin is in your extended network</p>
       </div>
+
       <div className='mt-2'>
         <p className='bg-myspace-orange pl-2 text-myspace-font-orange'>
           Kevin's blurbs
         </p>
         <p className=' pl-2 text-myspace-font-orange'>About me:</p>
+
         <p className='pl-2 pr-2 text-sm text-black'>
           I’m a full-stack developer with a primary focus on front-end
           technologies like React. Most recently I launched a product Svelte
