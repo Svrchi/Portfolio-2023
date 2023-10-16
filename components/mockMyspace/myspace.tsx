@@ -7,6 +7,7 @@ import TitleCard from './titleCard';
 import Contact from './Contact';
 import ContactForm from './ContactForm';
 import { motion } from 'framer-motion';
+import Error from '../Error';
 
 type Props = {};
 
@@ -39,11 +40,19 @@ function useWindowDimensions() {
 
 const Myspace: React.FC = (props: Props) => {
   const [showContactForm, setShowContactForm] = useState(false);
+  // error message pop up
+  const [showError, setShowError] = useState(true);
 
   const toggleForm = () => {
     console.log(showContactForm);
     setShowContactForm(!showContactForm);
   };
+
+  const toggleError = () => {
+    console.log('Show Error:', showError);
+    setShowError(!showError);
+  };
+
   // Have to resolve issue with window
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -62,6 +71,12 @@ const Myspace: React.FC = (props: Props) => {
 
   return (
     <div className='flex h-screen w-screen justify-center bg-gray-200'>
+     { showError && 
+     <div className='absolute h-screen w-screen bg-error-overlay z-40 flex justify-center '>
+     <Error toggleError={toggleError} />
+     </div>
+     }
+
       <div className='flex h-screen max-w-screen-lg bg-white '>
         <div
           id='column-1'
@@ -76,13 +91,7 @@ const Myspace: React.FC = (props: Props) => {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
-                        >
-              {/* <button
-                className='absolute  h-fit w-6 bg-black hover:bg-slate-400 top-[200px] right-[395px]'
-                onClick={toggleForm}
-              >
-                x
-              </button> */}
+            >
               <ContactForm toggleForm={toggleForm} />{' '}
             </motion.div>
           )}
@@ -91,7 +100,7 @@ const Myspace: React.FC = (props: Props) => {
         </div>
         <div
           id='column-2'
-          className='hidden h-screen w-7/12 justify-start border-l-2 pb-12 md:flex md:flex-col'
+          className='hidden h-screen w-7/12 justify-start  pb-12 md:flex md:flex-col'
         >
           <AboutMe />
           <TopSkills />

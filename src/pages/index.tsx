@@ -13,17 +13,20 @@ import AboutMe from '../../components/mockMyspace/aboutMe';
 import TopSkills from '../../components/mockMyspace/topSkills';
 import Myspace from '../../components/mockMyspace/Myspace';
 import ContactForm from '../../components/mockMyspace/ContactForm';
+import Error from '../../components/Error';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
+  const [showAlert, setShowAlert] = useState(false)
   return (
     <div className='z-0 h-screen snap-y snap-mandatory overflow-scroll bg-gray-700 text-white'>
       <Head>
         <title>Sarchi</title>
       </Head>
-      <Header />
+      {/* <Header /> */}
       {/* <section id='hero' className='snap-center'>
         <Hero />
       </section>
@@ -35,14 +38,24 @@ export default function Home() {
       </section> */}
 
       {/* scroll screen */}
-      <section id='scroll' className='snap-start '>
+      {/* <section id='scroll' className='snap-start '>
         <Scroll />
-      </section>
+      </section> */}
+      {/* 98.CSS ALERT COMPONENT */}
+      {/* <section id='error' className='snap-start '>
+        <div className='h-screen w-screen flex justify-center items-center bg-slate-100'>
+         { showAlert && <Error />}
+        </div>
+      </section> */}
       {/* myspace test page */}
-      <motion.section id='myspace1' className='snap-center'    initial={{  opacity: 0 }}      whileInView={{ opacity: 1 }}
+      <motion.section
+        id='myspace1'
+        className='snap-center'
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         transition={{ duration: 2 }}
         // viewport={{ once: true }}
-        >
+      >
         <Myspace />
       </motion.section>
     </div>

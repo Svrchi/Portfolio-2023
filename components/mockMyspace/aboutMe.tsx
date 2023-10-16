@@ -3,7 +3,7 @@ import React from 'react';
 
 const aboutMe = () => {
   return (
-    <div className='mt-6 flex h-1/2 w-11/12 flex-col justify-evenly border border-red-500'>
+    <div className='mt-6 flex h-1/2 w-11/12 flex-col justify-evenly '>
       <div className='flex min-h-[80px] items-center justify-center border-2 border-black font-black'>
         <p className='text-black'>Kevin is in your extended network</p>
       </div>
