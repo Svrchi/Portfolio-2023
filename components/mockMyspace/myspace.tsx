@@ -4,10 +4,10 @@ import Interest from './interest';
 import AboutMe from './aboutMe';
 import TopSkills from './topSkills';
 import TitleCard from './titleCard';
-import Contact from './Contact';
-import ContactForm from './ContactForm';
 import { motion } from 'framer-motion';
+import Contact from './Contact';
 import Error from '../Error';
+import ContactForm from './ContactForm'
 
 type Props = {};
 
@@ -71,11 +71,11 @@ const Myspace: React.FC = (props: Props) => {
 
   return (
     <div className='flex h-screen w-screen justify-center bg-gray-200'>
-     { showError && 
-     <div className='absolute h-screen w-screen bg-error-overlay z-40 flex justify-center '>
-     <Error toggleError={toggleError} />
-     </div>
-     }
+      {showError && (
+        <div className='bg-error-overlay absolute z-40 flex h-screen w-screen justify-center '>
+          <Error toggleError={toggleError} />
+        </div>
+      )}
 
       <div className='flex h-screen max-w-screen-lg bg-white '>
         <div

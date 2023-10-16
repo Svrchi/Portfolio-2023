@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import ContactForm from './ContactForm';
-// import PDF from '../../src/RESUME.pdf'
-
 interface Props {
   toggleForm: () => void;
 }

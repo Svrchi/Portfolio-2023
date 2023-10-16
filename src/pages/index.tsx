@@ -5,15 +5,12 @@ import Hero from '../../components/hero';
 import About from '../../components/about';
 import Experience from '../../components/experience';
 import TitleCard from '../../components/mockMyspace/titleCard';
-import Contact from '../../components/mockMyspace/Contact';
 import Scroll from '../../components/scroll';
 import LinkedinURL from '../../components/mockMyspace/linkedinURL';
 import Interest from '../../components/mockMyspace/interest';
 import AboutMe from '../../components/mockMyspace/aboutMe';
 import TopSkills from '../../components/mockMyspace/topSkills';
-import Myspace from '../../components/mockMyspace/Myspace';
-import ContactForm from '../../components/mockMyspace/ContactForm';
-import Error from '../../components/Error';
+import Myspace from '../../components/mockMyspace/myspace';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
