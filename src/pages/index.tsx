@@ -10,7 +10,7 @@ import LinkedinURL from '../../components/mockMyspace/linkedinURL';
 import Interest from '../../components/mockMyspace/interest';
 import AboutMe from '../../components/mockMyspace/aboutMe';
 import TopSkills from '../../components/mockMyspace/topSkills';
-import Myspace from '../../components/mockMyspace/myspace';
+import Myspace from '../../components/mockMyspace/Myspace';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
