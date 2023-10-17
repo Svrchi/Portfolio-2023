@@ -7,7 +7,7 @@ import TitleCard from './titleCard';
 import { motion } from 'framer-motion';
 import Contact from './Contact';
 import Error from '../Error';
-import ContactForm from './ContactForm'
+import ContactForm from './ContactForm';
 
 type Props = {};
 

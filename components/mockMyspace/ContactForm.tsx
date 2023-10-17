@@ -32,12 +32,11 @@ const ContactForm: React.FC<Props> = ({ toggleForm }) => {
           alt='Myspace logo'
         />
         <button
-        className=' relative h-fit w-fit font-extrabold left-[120px] -top-[20px] hover:text-gray-400 active:text-gray-900'
-        onClick={toggleForm}
-        
-      >
-        X
-      </button>
+          className=' relative -top-[20px] left-[120px] h-fit w-fit font-extrabold hover:text-gray-400 active:text-gray-900'
+          onClick={toggleForm}
+        >
+          X
+        </button>
       </div>
       <form
         className='flex  h-[290px] w-[271px] flex-col items-center justify-between'

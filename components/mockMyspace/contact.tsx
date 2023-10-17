@@ -177,7 +177,6 @@ const Contact: React.FC<Props> = ({ toggleForm }) => {
             </Link>
           </div>
           <div className='ml-4 flex w-fit items-center'>
-       
             <Link
               className='ml-2'
               href='https://www.youtube.com/watch?v=xvFZjo5PgG0'

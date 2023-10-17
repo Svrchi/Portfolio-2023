@@ -16,7 +16,7 @@ const topSkills = (props: Props) => {
         {/* first row */}
         <div className='flex h-1/2 items-center'>
           <div className='flex h-36 w-36 flex-col items-center justify-center '>
-            <p className='text-myspace-header-blue font-semibold'>React</p>
+            <p className='font-semibold text-myspace-header-blue'>React</p>
             <Image
               className=''
               src='/React-icon.png'
@@ -26,7 +26,7 @@ const topSkills = (props: Props) => {
             />
           </div>
           <div className='flex h-36 w-36 flex-col items-center justify-center '>
-            <p className='text-myspace-header-blue font-semibold'>TypeScript</p>
+            <p className='font-semibold text-myspace-header-blue'>TypeScript</p>
             <Image
               className=''
               src='/Typescript-logo.jpeg'
@@ -36,7 +36,7 @@ const topSkills = (props: Props) => {
             />
           </div>
           <div className='flex h-36 w-36 flex-col items-center justify-center '>
-            <p className='text-myspace-header-blue font-semibold'>Storybook</p>
+            <p className='font-semibold text-myspace-header-blue'>Storybook</p>
             <Image
               className=''
               src='/storybook-logo.png'
@@ -46,7 +46,7 @@ const topSkills = (props: Props) => {
             />
           </div>
           <div className='flex h-36 w-36 flex-col items-center justify-center '>
-            <p className='text-myspace-header-blue font-semibold'>GraphQL</p>
+            <p className='font-semibold text-myspace-header-blue'>GraphQL</p>
             <Image
               className=''
               src='/GraphQL-logo.png'
@@ -59,7 +59,7 @@ const topSkills = (props: Props) => {
         {/* second row */}
         <div className='flex h-1/2 items-center '>
           <div className='flex h-36 w-36 flex-col items-center justify-center '>
-            <p className='text-myspace-header-blue font-semibold'>Svelte</p>
+            <p className='font-semibold text-myspace-header-blue'>Svelte</p>
             <Image
               className=''
               src='/Svelte_logo.png'
@@ -69,7 +69,7 @@ const topSkills = (props: Props) => {
             />
           </div>
           <div className='flex h-36 w-36 flex-col items-center justify-center '>
-            <p className='text-myspace-header-blue font-semibold'>Next</p>
+            <p className='font-semibold text-myspace-header-blue'>Next</p>
             <Image
               className=''
               src='/nextjs-icon.png'
@@ -79,7 +79,7 @@ const topSkills = (props: Props) => {
             />
           </div>
           <div className='flex h-36 w-36 flex-col items-center justify-center '>
-            <p className='text-myspace-header-blue font-semibold'>React</p>
+            <p className='font-semibold text-myspace-header-blue'>React</p>
             <Image
               className=''
               src='/React-icon.png'
@@ -89,7 +89,7 @@ const topSkills = (props: Props) => {
             />
           </div>
           <div className='flex h-36 w-36 flex-col items-center justify-center '>
-            <p className='text-myspace-header-blue font-semibold'>Figma</p>
+            <p className='font-semibold text-myspace-header-blue'>Figma</p>
             <Image
               className=''
               src='/Figma-logo.png'
@@ -100,7 +100,7 @@ const topSkills = (props: Props) => {
           </div>
         </div>
       </div>
-      <p className='text-red-600 font-bold self-end'>view more</p>
+      <p className='self-end font-bold text-red-600'>view more</p>
     </div>
   );
 };
@@ -133,7 +133,7 @@ export default topSkills;
 //     <p className='bg-myspace-orange pl-2 font-medium text-myspace-font-orange'>
 //       Kevin's Skill Space
 //     </p>
-    
+
 //     <div className='flex h-full flex-col'>
 //       <div className='flex h-1/2 items-center'>
 //         {skillsData.map((skill, index) => (
@@ -146,4 +146,3 @@ export default topSkills;
 // );
 
 // export default TopSkills;
-

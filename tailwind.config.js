@@ -23,14 +23,14 @@ module.exports = {
         'error-overlay': 'rgba(189, 189, 189, 0.46)',
       },
       borderWidth: {
-        'inset': '10px 5px 10px 1px'
+        inset: '10px 5px 10px 1px',
       },
       borderColor: {
-        'inset': 'rgba(0, 0, 0, 0.5)'
+        inset: 'rgba(0, 0, 0, 0.5)',
       },
       borderStyle: {
-        'inset': 'inset'
-      }
+        inset: 'inset',
+      },
     },
   },
   plugins: [],
