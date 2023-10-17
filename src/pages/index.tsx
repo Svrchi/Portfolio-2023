@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import { Inter } from 'next/font/google';
-import Myspace from '../../components/mockMyspace/Myspace';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Myspace from '../../components/Myspace';
+
 
 const inter = Inter({ subsets: ['latin'] });
 

@@ -5,7 +5,7 @@ import AboutMe from './AboutMe';
 import TopSkills from './TopSkills';
 import TitleCard from './TitleCard';
 import Contact from './Contact';
-import Error from '../Error';
+import Error from './Error';
 import ContactForm from './ContactForm';
 import { motion } from 'framer-motion';
 
