@@ -1,15 +1,5 @@
 import Head from 'next/head';
 import { Inter } from 'next/font/google';
-import Header from '../../components/header';
-import Hero from '../../components/hero';
-import About from '../../components/about';
-import Experience from '../../components/experience';
-import TitleCard from '../../components/mockMyspace/TitleCard';
-import Scroll from '../../components/scroll';
-import LinkedinURL from '../../components/mockMyspace/LinkedinURL';
-import Interest from '../../components/mockMyspace/Interest';
-import AboutMe from '../../components/mockMyspace/AboutMe';
-import TopSkills from '../../components/mockMyspace/TopSkills';
 import Myspace from '../../components/mockMyspace/Myspace';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
