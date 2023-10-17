@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import LinkedinURL from './linkedinURL';
-import Interest from './interest';
-import AboutMe from './aboutMe';
-import TopSkills from './topSkills';
-import TitleCard from './titleCard';
+import LinkedinURL from './LinkedinURL';
+import Interest from './Interest';
+import AboutMe from './AboutMe';
+import TopSkills from './TopSkills';
+import TitleCard from './TitleCard';
 import { motion } from 'framer-motion';
 import Contact from './Contact';
 import Error from '../Error';

@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 
-const aboutMe = () => {
+const AboutMe = () => {
   return (
     <div className='mt-6 flex h-1/2 w-11/12 flex-col justify-evenly '>
       <div className='flex min-h-[80px] items-center justify-center border-2 border-black font-black'>
@@ -32,4 +32,4 @@ const aboutMe = () => {
   );
 };
 
-export default aboutMe;
+export default AboutMe;

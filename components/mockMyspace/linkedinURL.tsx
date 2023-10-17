@@ -2,7 +2,7 @@ import React from 'react';
 
 type Props = {};
 
-const linkedinURL = (props: Props) => {
+const LinkedinURL = (props: Props) => {
   return (
     <div className='w-5/6 border-[1px] border-myspace-blue text-black'>
       <p className='ml-1 font-black text-black'>LinkedIn URL:</p>
@@ -11,4 +11,4 @@ const linkedinURL = (props: Props) => {
   );
 };
 
-export default linkedinURL;
+export default LinkedinURL;

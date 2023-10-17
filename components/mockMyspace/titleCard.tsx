@@ -6,7 +6,7 @@ import moment from 'moment';
 type Props = {};
 // const firstDateOfMonth = moment().startOf("month").format("MM-DD-YYYY");
 const currentDate = moment().subtract(10, 'days').calendar();
-const titleCard = (props: Props) => {
+const TitleCard = (props: Props) => {
   return (
     <div className='flex  w-5/6 text-black  '>
       <div id='left-col'>
@@ -58,4 +58,4 @@ const titleCard = (props: Props) => {
   );
 };
 
-export default titleCard;
+export default TitleCard;

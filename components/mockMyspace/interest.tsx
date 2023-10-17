@@ -3,7 +3,7 @@ import React from 'react';
 
 type Props = {};
 
-const interest = (props: Props) => {
+const Interest = (props: Props) => {
   return (
     <div className='flex h-2/5 w-5/6 flex-col justify-start border-2 border-myspace-blue '>
       <div className='w-full bg-myspace-blue '>
@@ -37,4 +37,4 @@ const interest = (props: Props) => {
   );
 };
 
-export default interest;
+export default Interest;

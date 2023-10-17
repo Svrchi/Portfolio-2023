@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 type Props = {};
 
-const topSkills = (props: Props) => {
+const TopSkills = (props: Props) => {
   return (
     <div className='min-h-2/5 max-h-2/5 mt-5 flex w-11/12 flex-col '>
       <p className='bg-myspace-orange pl-2 font-medium text-myspace-font-orange'>
@@ -105,7 +105,7 @@ const topSkills = (props: Props) => {
   );
 };
 
-export default topSkills;
+export default TopSkills;
 
 // import React from 'react';
 // import Image from 'next/image';
