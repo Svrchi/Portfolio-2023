@@ -4,10 +4,10 @@ import Interest from './Interest';
 import AboutMe from './AboutMe';
 import TopSkills from './TopSkills';
 import TitleCard from './TitleCard';
-import { motion } from 'framer-motion';
 import Contact from './Contact';
 import Error from '../Error';
 import ContactForm from './ContactForm';
+import { motion } from 'framer-motion';
 
 type Props = {};
 
