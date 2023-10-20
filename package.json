@@ -31,6 +31,7 @@
   "devDependencies": {
     "@types/feather-icons": "^4.29.1",
     "autoprefixer": "^10.4.14",
+    "file-loader": "^6.2.0",
     "postcss": "^8.4.27",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.4",

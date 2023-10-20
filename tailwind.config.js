@@ -21,6 +21,10 @@ module.exports = {
         'myspace-orange': '#ffcc99',
         'myspace-font-orange': '#ff6705',
         'error-overlay': 'rgba(189, 189, 189, 0.46)',
+        'windows98-gray': '#bdc0bf',
+        'windows98-border-gray': '#d6dadd',
+        'windows98-blue': '#010186',
+
       },
       borderWidth: {
         inset: '10px 5px 10px 1px',
