@@ -13,6 +13,9 @@ module.exports = {
         DotGothic: ['DotGothic'],
         Pixel: ['VT323'],
       },
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0) 50%, hsla(0, 0%, 0%, 0.3) 50%, hsla(0, 0%, 100%, 0.2))'
+      },
       colors: {
         'myspace-blue': '#6699cc',
         'myspace-blue-two': '#b1d0f0',

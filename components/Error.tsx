@@ -7,6 +7,7 @@ import Ping from '../public/microsoft-windows-98-error.mp3'
 
 interface Props {
   toggleError: () => void;
+  errorMessage: string;
 }
 
 function playSound(url: any) {
@@ -14,10 +15,10 @@ function playSound(url: any) {
   audio.play();
 }
 
-const Error: React.FC<Props> = ({ toggleError }) => {
-  useEffect(() => {
-    playSound(Ping);
-  }, []); 
+const Error: React.FC<Props> = ({ toggleError, errorMessage }) => {
+  // useEffect(() => {
+  //   playSound(Ping);
+  // }, []); 
 
 
 
@@ -32,7 +33,7 @@ const Error: React.FC<Props> = ({ toggleError }) => {
       }}
       className='absolute top-[35%] z-50 h-[161px] w-[380px] border-b-2 border-r-2 border-black'
     >
-      {/* <audio src={Ping}  autoPlay controls /> */}
+      <audio src={Ping}  autoPlay muted/>
       <div className='h-[159px] border-b border-r border-gray-500'>
         <div className='border-windows98-gray border-l-2 border-t-2'>
           <div className='border-windows98-border-gray border-l-2 border-t'>
@@ -69,15 +70,15 @@ const Error: React.FC<Props> = ({ toggleError }) => {
                 </div>
               </div>
               <div className='flex h-5/6 flex-col items-center justify-evenly'>
-                <div className='flex  w-11/12 items-center justify-evenly'>
+                <div className=' flex w-11/12 justify-center items-center sm:justify-evenly  '>
                   <Image
-                    className='align '
+                    className=''
                     src='/alert.png'
                     width={50}
                     height={50}
                     alt='alert'
                   />
-                  <p className='text-black '>Website under maintenance. </p>
+                  <p className='text-black pl-2 sm:p-0'> {errorMessage} </p>
                 </div>
                 {/* Ok Button */}
                 <div className='border-b-2 border-r-2 border-black '>

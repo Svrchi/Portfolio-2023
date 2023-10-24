@@ -12,13 +12,21 @@ import { motion } from 'framer-motion';
 type Props = {};
 
 function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
+  if (typeof window !== 'undefined') {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height,
+    };
+  }
+
+  // Default values or fallbacks can be placed here.
+  // Adjust them as per your requirements.
   return {
-    width,
-    height,
+    width: undefined,
+    height: undefined,
   };
 }
-
 function useWindowDimensions() {
   const [windowDimensions, setWindowDimensions] = useState(
     getWindowDimensions()
@@ -53,27 +61,28 @@ const Myspace: React.FC = (props: Props) => {
     setShowError(!showError);
   };
 
-  // Have to resolve issue with window
+  const mobileError: string = 'Mobile coming soon.';
+  const generalError:string = 'Website under maintenance.'
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  // const { height, width } = useWindowDimensions();
-  // console.log(height)
-  //   console.log(width)
+  const { height, width } = useWindowDimensions();
+  console.log(height);
+  console.log(width);
 
-  // if (width < 600){
-  //   return (
-  //     <div>
-  //       test
-  //     </div>
-
-  //   )
-  // }
+  // renders nothing if mobile
+  if (typeof width !== 'undefined' && width < 600) {
+    return (
+      <div className='flex items-center justify-center'>
+        <Error toggleError={toggleError} errorMessage={mobileError} />
+      </div>
+    );
+  }
 
   return (
     <div className='flex h-screen w-screen justify-center bg-gray-200'>
       {showError && (
         <div className='bg-error-overlay absolute z-40 flex h-screen w-screen justify-center '>
-          <Error toggleError={toggleError} />
+          <Error toggleError={toggleError} errorMessage={generalError} />
         </div>
       )}
 
