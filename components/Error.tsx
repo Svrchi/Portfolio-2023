@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Ping from '../public/microsoft-windows-98-error.mp3'
-
-
+import Ping from '../public/microsoft-windows-98-error.mp3';
 
 interface Props {
   toggleError: () => void;
@@ -18,9 +16,7 @@ function playSound(url: any) {
 const Error: React.FC<Props> = ({ toggleError, errorMessage }) => {
   // useEffect(() => {
   //   playSound(Ping);
-  // }, []); 
-
-
+  // }, []);
 
   return (
     <motion.div
@@ -33,7 +29,7 @@ const Error: React.FC<Props> = ({ toggleError, errorMessage }) => {
       }}
       className='absolute top-[35%] z-50 h-[161px] w-[380px] border-b-2 border-r-2 border-black'
     >
-      <audio src={Ping}  autoPlay muted/>
+      <audio src={Ping} autoPlay muted />
       <div className='h-[159px] border-b border-r border-gray-500'>
         <div className='border-windows98-gray border-l-2 border-t-2'>
           <div className='border-windows98-border-gray border-l-2 border-t'>
@@ -70,18 +66,18 @@ const Error: React.FC<Props> = ({ toggleError, errorMessage }) => {
                 </div>
               </div>
               <div className='flex h-5/6 flex-col items-center justify-evenly'>
-                <div className=' flex w-11/12 justify-center items-center sm:justify-evenly  '>
+                <div className=' flex w-11/12 items-center justify-center sm:justify-evenly  '>
                   <Image
                     className=''
-                    src='/alert.png'
-                    width={50}
+                    src='/msg_warning-0.png'
+                    width={40}
                     height={50}
                     alt='alert'
                   />
-                  <p className='text-black pl-2 sm:p-0'> {errorMessage} </p>
+                  <p className='pl-2 text-black sm:p-0'> {errorMessage} </p>
                 </div>
                 {/* Ok Button */}
-                <div className='border-b-2 border-r-2 border-black '>
+                <div className='hidden border-b-2 border-r-2  border-black sm:block '>
                   <div className='border-b border-r border-gray-500'>
                     <div className='border-l-2 border-t-2'>
                       <div className='border-l border-t border-gray-300'>
