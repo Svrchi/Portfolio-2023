@@ -24,13 +24,12 @@ const Interest = (props: Props) => {
         <div className='mr-1 w-1/3 bg-blue-500 pl-1 font-semibold text-blue-800'>
           Music
         </div>
-        <div className='w-2/3 overflow-scroll bg-blue-200 text-xs text-black'>
+        <div className='w-2/3 bg-blue-200 text-xs text-black overflow-clip pt-1'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
           eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis. Non
           enim praesent elementum facilisis leo vel fringilla est. Lorem donec
-          massa sapien faucibus. Aliquam sem et tortor consequat id porta nibh
-          venenatis.
+          massa sapien faucibus liquam sem.
         </div>
       </div>
     </div>

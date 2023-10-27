@@ -6,7 +6,7 @@ type Props = {};
 
 const TopSkills = (props: Props) => {
   return (
-    <div className='min-h-2/5 max-h-2/5 mt-5 flex w-11/12 flex-col '>
+    <div className='min-h-2/5 max-h-2/5 mt-5 flex w-11/12 flex-col'>
       <p className='bg-myspace-orange pl-2 font-medium text-myspace-font-orange'>
         Kevin's Skill Space
       </p>
@@ -15,7 +15,7 @@ const TopSkills = (props: Props) => {
       <div className=' flex h-full flex-col'>
         {/* first row */}
         <div className='flex h-1/2 items-center'>
-          <div className='flex h-36 w-36 flex-col items-center justify-center '>
+          <div className='flex h-36 w-36 flex-col items-center justify-center hover:bg-slate-50'>
             <p className='font-semibold text-myspace-header-blue'>React</p>
             <Image
               className=''
@@ -25,17 +25,17 @@ const TopSkills = (props: Props) => {
               alt='React Logo'
             />
           </div>
-          <div className='flex h-36 w-36 flex-col items-center justify-center '>
+          <div className='flex h-36 w-36 flex-col items-center justify-center hover:bg-slate-50'>
             <p className='font-semibold text-myspace-header-blue'>TypeScript</p>
             <Image
               className=''
               src='/Typescript-logo.jpeg'
-              width={100}
-              height={100}
+              width={90}
+              height={90}
               alt='TypeScript logo'
             />
           </div>
-          <div className='flex h-36 w-36 flex-col items-center justify-center '>
+          <div className='flex h-36 w-36 flex-col items-center justify-center hover:bg-slate-50'>
             <p className='font-semibold text-myspace-header-blue'>Storybook</p>
             <Image
               className=''
@@ -45,7 +45,7 @@ const TopSkills = (props: Props) => {
               alt='Storybook logo'
             />
           </div>
-          <div className='flex h-36 w-36 flex-col items-center justify-center '>
+          <div className='flex h-36 w-36 flex-col items-center justify-center hover:bg-slate-50'>
             <p className='font-semibold text-myspace-header-blue'>GraphQL</p>
             <Image
               className=''
@@ -58,7 +58,7 @@ const TopSkills = (props: Props) => {
         </div>
         {/* second row */}
         <div className='flex h-1/2 items-center '>
-          <div className='flex h-36 w-36 flex-col items-center justify-center '>
+          <div className='flex h-36 w-36 flex-col items-center justify-center hover:bg-slate-50'>
             <p className='font-semibold text-myspace-header-blue'>Svelte</p>
             <Image
               className=''
@@ -68,7 +68,7 @@ const TopSkills = (props: Props) => {
               alt='Svelte Logo'
             />
           </div>
-          <div className='flex h-36 w-36 flex-col items-center justify-center '>
+          <div className='flex h-36 w-36 flex-col items-center justify-center hover:bg-slate-50'>
             <p className='font-semibold text-myspace-header-blue'>Next</p>
             <Image
               className=''
@@ -78,7 +78,7 @@ const TopSkills = (props: Props) => {
               alt='Next.js logo'
             />
           </div>
-          <div className='flex h-36 w-36 flex-col items-center justify-center '>
+          <div className='flex h-36 w-36 flex-col items-center justify-center hover:bg-slate-50'>
             <p className='font-semibold text-myspace-header-blue'>Figma</p>
             <Image
               className=''
@@ -88,7 +88,7 @@ const TopSkills = (props: Props) => {
               alt='Figma logo'
             />
           </div>
-          <div className='flex h-36 w-36 flex-col items-center justify-center '>
+          <div className='flex h-36 w-36 flex-col items-center justify-center hover:bg-slate-100'>
             <p className='font-semibold text-myspace-header-blue'>Cypress</p>
             <Image
               className=''

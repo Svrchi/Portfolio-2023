@@ -78,8 +78,7 @@ const Contact: React.FC<Props> = ({ toggleForm }) => {
             </svg>
             <Link
               className='z-20 ml-2 text-blue-600'
-              // href={PDF}
-              href=''
+              href='/resume.pdf'
               rel='noopener noreferrer'
               target='_blank'
             >
