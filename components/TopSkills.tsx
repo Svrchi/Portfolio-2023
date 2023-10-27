@@ -75,17 +75,7 @@ const TopSkills = (props: Props) => {
               src='/nextjs-icon.png'
               width={100}
               height={100}
-              alt='Next.js Logo'
-            />
-          </div>
-          <div className='flex h-36 w-36 flex-col items-center justify-center '>
-            <p className='font-semibold text-myspace-header-blue'>React</p>
-            <Image
-              className=''
-              src='/React-icon.png'
-              width={100}
-              height={100}
-              alt='react'
+              alt='Next.js logo'
             />
           </div>
           <div className='flex h-36 w-36 flex-col items-center justify-center '>
@@ -98,6 +88,16 @@ const TopSkills = (props: Props) => {
               alt='Figma logo'
             />
           </div>
+          <div className='flex h-36 w-36 flex-col items-center justify-center '>
+            <p className='font-semibold text-myspace-header-blue'>Cypress</p>
+            <Image
+              className=''
+              src='/cypressjs.png'
+              width={100}
+              height={100}
+              alt='Cypress.js logo'
+            />
+          </div>
         </div>
       </div>
       <p className='self-end font-bold text-red-600'>view more</p>
@@ -107,42 +107,3 @@ const TopSkills = (props: Props) => {
 
 export default TopSkills;
 
-// import React from 'react';
-// import Image from 'next/image';
-
-// const Skill: React.FC<{ name: string; imageSrc: string }> = ({ name, imageSrc }) => (
-//   <div className='flex h-36 w-36 flex-col items-center justify-center'>
-//     <p className='text-myspace-header-blue font-semibold'>{name}</p>
-//     <Image src={imageSrc} width={100} height={100} alt={`${name} Logo`} />
-//   </div>
-// );
-
-// const skillsData = [
-//   { name: 'React', imageSrc: '/React-icon.png' },
-//   { name: 'TypeScript', imageSrc: '/Typescript-logo.jpeg' },
-//   { name: 'Storybook', imageSrc: '/storybook-logo.png' },
-//   { name: 'GraphQL', imageSrc: '/GraphQL-logo.png' },
-//   { name: 'Svelte', imageSrc: '/Svelte_logo.png' },
-//   { name: 'Next', imageSrc: '/nextjs-icon.png' },
-//   { name: 'Figma', imageSrc: '/Figma-logo.png' },
-//   // Add more skills as needed
-// ];
-
-// const TopSkills: React.FC = () => (
-//   <div className='min-h-2/5 max-h-2/5 mt-5 flex w-11/12 flex-col border-blue-600 border'>
-//     <p className='bg-myspace-orange pl-2 font-medium text-myspace-font-orange'>
-//       Kevin's Skill Space
-//     </p>
-
-//     <div className='flex h-full flex-col'>
-//       <div className='flex h-1/2 items-center'>
-//         {skillsData.map((skill, index) => (
-//           <Skill key={index} name={skill.name} imageSrc={skill.imageSrc} />
-//         ))}
-//       </div>
-//       <p className='text-red-600 font-bold self-end'>view more</p>
-//     </div>
-//   </div>
-// );
-
-// export default TopSkills;
