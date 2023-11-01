@@ -62,7 +62,7 @@ const Myspace: React.FC = (props: Props) => {
   };
 
   const mobileError: string = 'Mobile coming soon.';
-  const generalError:string = 'Website under maintenance.'
+  const generalError: string = 'Website under maintenance.';
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { height, width } = useWindowDimensions();
@@ -79,17 +79,21 @@ const Myspace: React.FC = (props: Props) => {
   }
 
   return (
-    <div className='flex h-screen w-screen justify-center bg-gray-200'>
+    <div className='flex h-screen w-screen justify-center bg-gray-200 over'>
       {showError && (
         <div className='bg-error-overlay absolute z-40 flex h-screen w-screen justify-center '>
           <Error toggleError={toggleError} errorMessage={generalError} />
         </div>
       )}
 
-      <div className='flex h-screen max-w-screen-lg bg-white '>
+      <div className='flex-col h-screen max-w-screen-lg bg-white '>
+        {/* Header */}
+        <div className='h-8 w-full  bg-myspace-blue '></div>
+      {/* column 1  */}
+      <div className='flex'>
         <div
           id='column-1'
-          className='flex h-screen w-5/12 min-w-[450px] flex-col items-center justify-evenly pt-12 '
+          className='flex h-screen w-5/12 min-w-[450px] flex-col items-center justify-evenly'
         >
           <TitleCard />
           <Contact toggleForm={toggleForm} />
@@ -108,6 +112,7 @@ const Myspace: React.FC = (props: Props) => {
           <Interest />
         </div>
         <div
+        // Column 2
           id='column-2'
           className='hidden h-screen w-7/12 justify-start  pb-12 md:flex md:flex-col'
         >
@@ -115,6 +120,7 @@ const Myspace: React.FC = (props: Props) => {
           <TopSkills />
         </div>
       </div>
+    </div>
     </div>
   );
 };

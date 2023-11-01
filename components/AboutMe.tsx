@@ -12,20 +12,25 @@ const AboutMe = () => {
         <p className='bg-myspace-orange pl-2 text-myspace-font-orange'>
           Kevin's blurbs
         </p>
-        <p className=' pl-2 text-myspace-font-orange'>About me:</p>
+        <p className='mt-1 pl-2 text-myspace-font-orange'>About me:</p>
 
-        <p className='pl-2 pr-2 text-sm text-black'>
-          I’m a full-stack developer with a primary focus on front-end
-          technologies like React. Most recently I launched a product Svelte
-          Storm through a tech accelerator OS Labs. If you're not familiar with
-          Svelte, it’s similar to React in that it is a frontend technology but
-          differs mainly in the fact that svelte is a compiler and not a
-          library. Since the programming landscape is ever-changing and
-          constantly progressing my team and I decided to dive into this newer
-          piece of tech while giving other curious developers an easier way to
-          explore svelte by building an IDE with built-in tooling like state
-          management. Since its launch Svelte Storm has garnered over 500 stars
-          on Github and was received well by the community.
+        <p className='mb-1 pl-2 pr-2 text-sm text-black'>
+          Hello! I’m a full-stack developer with a strong focus on front-end
+          technologies, particularly React. A couple of years back, I launched
+          Svelte Storm–a Svelte native IDE, under the guidance of the tech
+          accelerator OS Labs. This project happened before Svelte garnered
+          support from Vercel, so the framework was still in its infancy.
+          Nonetheless, it was a fun and exciting experience creating a tool for
+          other curious developers like myself. Since its inception, Svelte
+          Storm has undergone several iterations and has accumulated over 900
+          GitHub stars. After Svelte Storm I took on a role as a software
+          engineer at Hearst Media, specifically within their newspaper division
+          where I played a role in migrating from a PHP-based legacy codebase to
+          a modern tech stack, creating and integrating new components across
+          over 60 platforms. Outside of coding, I find joy in photography and
+          experimenting with my collection of cameras. I’ve attached some of my
+          photographs around here; feel free to take a look! Thanks for dropping
+          by, and I hope we get to connect soon!
         </p>
       </div>
     </div>

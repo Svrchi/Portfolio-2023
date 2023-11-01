@@ -12,7 +12,7 @@ const TopSkills = (props: Props) => {
       </p>
 
       {/* skill container */}
-      <div className=' flex h-full flex-col'>
+      <div className=' flex h-full flex-col mt-1'>
         {/* first row */}
         <div className='flex h-1/2 items-center'>
           <div className='flex h-36 w-36 flex-col items-center justify-center hover:bg-slate-50'>

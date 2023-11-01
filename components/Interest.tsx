@@ -5,7 +5,7 @@ type Props = {};
 
 const Interest = (props: Props) => {
   return (
-    <div className='flex h-2/5 w-5/6 flex-col justify-start border-2 border-myspace-blue '>
+    <div className='flex h-[30%] w-5/6 flex-col justify-start border-2 border-myspace-blue '>
       <div className='w-full bg-myspace-blue '>
         <p className='text-white '>Kevin's Interest</p>
       </div>
@@ -27,9 +27,7 @@ const Interest = (props: Props) => {
         <div className='w-2/3 bg-blue-200 text-xs text-black overflow-clip pt-1'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-          eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis. Non
-          enim praesent elementum facilisis leo vel fringilla est. Lorem donec
-          massa sapien faucibus liquam sem.
+          eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis. 
         </div>
       </div>
     </div>
