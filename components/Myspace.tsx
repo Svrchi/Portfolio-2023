@@ -7,6 +7,7 @@ import TitleCard from './TitleCard';
 import Contact from './Contact';
 import Error from './Error';
 import ContactForm from './ContactForm';
+import MyspaceHeader from './MyspaceHeader';
 import { motion } from 'framer-motion';
 
 type Props = {};
@@ -52,12 +53,10 @@ const Myspace: React.FC = (props: Props) => {
   const [showError, setShowError] = useState(true);
 
   const toggleForm = () => {
-    console.log(showContactForm);
     setShowContactForm(!showContactForm);
   };
 
   const toggleError = () => {
-    console.log('Show Error:', showError);
     setShowError(!showError);
   };
 
@@ -66,8 +65,7 @@ const Myspace: React.FC = (props: Props) => {
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { height, width } = useWindowDimensions();
-  console.log(height);
-  console.log(width);
+
 
   // renders nothing if mobile
   if (typeof width !== 'undefined' && width < 600) {
@@ -79,48 +77,48 @@ const Myspace: React.FC = (props: Props) => {
   }
 
   return (
-    <div className='flex h-screen w-screen justify-center bg-gray-200 over'>
+    <div className='over flex h-screen w-screen justify-center bg-gray-200'>
       {showError && (
         <div className='bg-error-overlay absolute z-40 flex h-screen w-screen justify-center '>
           <Error toggleError={toggleError} errorMessage={generalError} />
         </div>
       )}
 
-      <div className='flex-col h-screen max-w-screen-lg bg-white '>
+      <div className='h-screen max-w-screen-lg flex-col bg-white '>
         {/* Header */}
-        <div className='h-8 w-full  bg-myspace-blue '></div>
-      {/* column 1  */}
-      <div className='flex'>
-        <div
-          id='column-1'
-          className='flex h-screen w-5/12 min-w-[450px] flex-col items-center justify-evenly'
-        >
-          <TitleCard />
-          <Contact toggleForm={toggleForm} />
-          {showContactForm && (
-            <motion.div
-              className='absolute left-0 top-12 z-20 flex h-screen w-screen items-center justify-center'
-              initial={{ y: -100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true }}
-            >
-              <ContactForm toggleForm={toggleForm} />{' '}
-            </motion.div>
-          )}
-          <LinkedinURL />
-          <Interest />
-        </div>
-        <div
-        // Column 2
-          id='column-2'
-          className='hidden h-screen w-7/12 justify-start  pb-12 md:flex md:flex-col'
-        >
-          <AboutMe />
-          <TopSkills />
+        <MyspaceHeader />
+        {/* column 1  */}
+        <div className='flex'>
+          <div
+            id='column-1'
+            className='flex h-screen w-5/12 min-w-[450px] flex-col items-center justify-evenly'
+          >
+            <TitleCard />
+            <Contact toggleForm={toggleForm} />
+            {showContactForm && (
+              <motion.div
+                className='absolute left-0 top-12 z-20 flex h-screen w-screen items-center justify-center'
+                initial={{ y: -100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true }}
+              >
+                <ContactForm toggleForm={toggleForm} />{' '}
+              </motion.div>
+            )}
+            <LinkedinURL />
+            <Interest />
+          </div>
+          <div
+            // Column 2
+            id='column-2'
+            className='hidden h-screen w-7/12 justify-start  pb-12 md:flex md:flex-col'
+          >
+            <AboutMe />
+            <TopSkills />
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };
