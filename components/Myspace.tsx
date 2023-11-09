@@ -66,7 +66,6 @@ const Myspace: React.FC = (props: Props) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { height, width } = useWindowDimensions();
 
-
   // renders nothing if mobile
   if (typeof width !== 'undefined' && width < 600) {
     return (
@@ -77,7 +76,7 @@ const Myspace: React.FC = (props: Props) => {
   }
 
   return (
-    <div className='over flex h-screen w-screen justify-center bg-gray-200'>
+    <div className=' flex h-screen w-screen justify-center bg-gray-200'>
       {showError && (
         <div className='bg-error-overlay absolute z-40 flex h-screen w-screen justify-center '>
           <Error toggleError={toggleError} errorMessage={generalError} />
@@ -88,7 +87,7 @@ const Myspace: React.FC = (props: Props) => {
         {/* Header */}
         <MyspaceHeader />
         {/* column 1  */}
-        <div className='flex'>
+        <div className='flex justify-center border  border-black'>
           <div
             id='column-1'
             className='flex h-screen w-5/12 min-w-[450px] flex-col items-center justify-evenly'
@@ -112,7 +111,7 @@ const Myspace: React.FC = (props: Props) => {
           <div
             // Column 2
             id='column-2'
-            className='hidden h-screen w-7/12 justify-start  pb-12 md:flex md:flex-col'
+            className='hidden h-screen min-h-[780px] w-7/12 justify-start border pb-12 md:flex md:flex-col'
           >
             <AboutMe />
             <TopSkills />
