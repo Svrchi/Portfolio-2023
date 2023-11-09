@@ -87,7 +87,7 @@ const Myspace: React.FC = (props: Props) => {
         {/* Header */}
         <MyspaceHeader />
         {/* column 1  */}
-        <div className='flex justify-center border  border-black'>
+        <div className='flex justify-center'>
           <div
             id='column-1'
             className='flex h-screen w-5/12 min-w-[450px] flex-col items-center justify-evenly'
@@ -111,7 +111,7 @@ const Myspace: React.FC = (props: Props) => {
           <div
             // Column 2
             id='column-2'
-            className='hidden h-screen min-h-[780px] w-7/12 justify-start border pb-12 md:flex md:flex-col'
+            className='hidden h-screen min-h-[780px] w-7/12 justify-start pb-12 md:flex md:flex-col'
           >
             <AboutMe />
             <TopSkills />

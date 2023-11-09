@@ -6,7 +6,7 @@ type Props = {};
 
 const TopSkills = (props: Props) => {
   return (
-    <div className='mt-2 flex h-fit max-h-fit w-11/12 flex-col border border-blue-500'>
+    <div className='mt-2 flex h-fit max-h-fit w-11/12 flex-col'>
       <p className='bg-myspace-orange pl-2 font-medium text-myspace-font-orange'>
         Kevin's Skill Space
       </p>
