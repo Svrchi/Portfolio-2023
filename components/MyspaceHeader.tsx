@@ -15,7 +15,7 @@ const MyspaceHeader = (props: Props) => {
     '|',
     'Bulletins',
     '|',
-    'Projectsgit ',
+    'Projects',
     '|',
     'Groups',
     '|',
