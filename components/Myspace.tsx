@@ -90,7 +90,7 @@ const Myspace: React.FC = (props: Props) => {
           {/* column 1  */}
           <div
             id='column-1'
-            className='flex h-screen max-h-[840px] min-h-[800px] w-5/12 min-w-[450px] flex-col items-center justify-evenly border border-black'
+            className='flex h-screen max-h-[840px] min-h-[800px] w-5/12 min-w-[450px] flex-col items-center justify-evenly'
           >
             <TitleCard />
             <Contact toggleForm={toggleForm} />
