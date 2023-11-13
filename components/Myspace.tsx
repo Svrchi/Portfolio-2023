@@ -82,15 +82,15 @@ const Myspace: React.FC = (props: Props) => {
           <Error toggleError={toggleError} errorMessage={generalError} />
         </div>
       )}
-
       <div className='h-screen max-w-screen-lg flex-col bg-white '>
         {/* Header */}
         <MyspaceHeader />
-        {/* column 1  */}
+
         <div className='flex justify-center'>
+          {/* column 1  */}
           <div
             id='column-1'
-            className='flex h-screen w-5/12 min-w-[450px] flex-col items-center justify-evenly'
+            className='flex h-screen max-h-[840px] min-h-[800px] w-5/12 min-w-[450px] flex-col items-center justify-evenly border border-black'
           >
             <TitleCard />
             <Contact toggleForm={toggleForm} />
@@ -111,7 +111,7 @@ const Myspace: React.FC = (props: Props) => {
           <div
             // Column 2
             id='column-2'
-            className='hidden h-screen min-h-[780px] w-7/12 justify-start pb-12 md:flex md:flex-col'
+            className='hidden h-screen min-h-[780px] w-7/12 justify-start pb-12 md:flex md:flex-col '
           >
             <AboutMe />
             <TopSkills />
