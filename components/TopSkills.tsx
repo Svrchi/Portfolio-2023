@@ -36,13 +36,13 @@ const TopSkills = (props: Props) => {
             />
           </div>
           <div className='flex h-36 w-36 flex-col items-center justify-center hover:bg-slate-50'>
-            <p className='font-semibold text-myspace-header-blue'>Storybook</p>
+            <p className='font-semibold text-myspace-header-blue'>Next</p>
             <Image
               className=''
-              src='/storybook-logo.png'
+              src='/nextjs-icon.png'
               width={100}
               height={100}
-              alt='Storybook logo'
+              alt='Next.js logo'
             />
           </div>
           <div className='flex h-36 w-36 flex-col items-center justify-center hover:bg-slate-50'>
@@ -68,14 +68,26 @@ const TopSkills = (props: Props) => {
               alt='Svelte Logo'
             />
           </div>
-          <div className='flex h-36 w-36 flex-col items-center justify-center hover:bg-slate-50'>
-            <p className='font-semibold text-myspace-header-blue'>Next</p>
+          
+
+          <div className='flex h-36 w-36 flex-col items-center justify-center hover:bg-slate-100'>
+            <p className='font-semibold text-myspace-header-blue'>Cypress</p>
             <Image
               className=''
-              src='/nextjs-icon.png'
+              src='/cypressjs.png'
               width={100}
               height={100}
-              alt='Next.js logo'
+              alt='Cypress.js logo'
+            />
+          </div>
+          <div className='flex h-36 w-36 flex-col items-center justify-center hover:bg-slate-50'>
+            <p className='font-semibold text-myspace-header-blue'>SASS</p>
+            <Image
+              className=''
+              src='/sass.png'
+              width={100}
+              height={100}
+              alt='Sass Logo'
             />
           </div>
           <div className='flex h-36 w-36 flex-col items-center justify-center hover:bg-slate-50'>
@@ -86,16 +98,6 @@ const TopSkills = (props: Props) => {
               width={60}
               height={0}
               alt='Figma logo'
-            />
-          </div>
-          <div className='flex h-36 w-36 flex-col items-center justify-center hover:bg-slate-100'>
-            <p className='font-semibold text-myspace-header-blue'>Cypress</p>
-            <Image
-              className=''
-              src='/cypressjs.png'
-              width={100}
-              height={100}
-              alt='Cypress.js logo'
             />
           </div>
         </div>
