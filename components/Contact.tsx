@@ -8,7 +8,7 @@ const Contact: React.FC<Props> = ({ toggleForm }) => {
   return (
     <div
       id='contact-container'
-      className='relative h-1/5 max-h-[180px] min-h-[150px] w-5/6 border-2 border-myspace-blue'
+      className='relative h-1/5 max-h-[165px] min-h-[150px] w-5/6 border-2 border-myspace-blue'
     >
       <div className='bg-myspace-blue '>
         <p className='pl-4 font-bold text-white '>Contacting Kevin</p>{' '}
