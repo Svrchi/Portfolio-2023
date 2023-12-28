@@ -5,10 +5,10 @@ import moment from 'moment';
 
 type Props = {};
 // const firstDateOfMonth = moment().startOf("month").format("MM-DD-YYYY");
-const currentDate = moment().subtract(10, 'days').calendar();
+const currentDate = moment().subtract(7, 'days').calendar();
 const TitleCard = (props: Props) => {
   return (
-    <div className='flex  w-5/6 text-black  '>
+    <div className='flex w-5/6 text-black pt-5 pb-7'>
       <div id='left-col'>
         <p className='font-bold'>Kevin Sarchi</p>
         {/* NEEDS WIDER PHOTO TO BALANCE SPACING */}
