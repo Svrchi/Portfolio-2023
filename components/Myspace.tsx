@@ -76,13 +76,13 @@ const Myspace: React.FC = (props: Props) => {
   }
 
   return (
-    <div className=' flex h-screen w-screen justify-center bg-gray-200'>
+    <div className='flex w-screen justify-center bg-gray-200'>
       {showError && (
         <div className='bg-error-overlay absolute z-40 flex h-screen w-screen justify-center '>
           <Error toggleError={toggleError} errorMessage={generalError} />
         </div>
       )}
-      <div className='h-screen max-w-screen-lg flex-col bg-white '>
+      <div className='max-w-screen-lg flex-col bg-white min-h-[800px]'>
         {/* Header */}
         <MyspaceHeader />
 
@@ -90,7 +90,7 @@ const Myspace: React.FC = (props: Props) => {
           {/* column 1  */}
           <div
             id='column-1'
-            className='flex h-screen max-h-[840px] min-h-[800px] w-5/12 min-w-[450px] flex-col items-center justify-evenly'
+            className='flex h-screen min-h-[800px] w-5/12 min-w-[450px] flex-col items-center justify-start  pb-20'
           >
             <TitleCard />
             <Contact toggleForm={toggleForm} />
