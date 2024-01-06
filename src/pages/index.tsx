@@ -13,6 +13,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  
 
   useEffect(() => {
     setTimeout(() => setLoading(false), 4000);
@@ -28,7 +29,7 @@ export default function Home() {
     );
   }
   return (
-    <div className='z-0 h-screen snap-y snap-mandatory text-white '>
+    <div className='z-0 h-screen snap-y snap-mandatory text-white'>
       <Head>
         <title>Sarchi</title>
       </Head>

@@ -45,12 +45,16 @@ function useWindowDimensions() {
   return windowDimensions;
 }
 
-// const { height, width } = useWindowDimensions();
-
 const Myspace: React.FC = (props: Props) => {
   const [showContactForm, setShowContactForm] = useState(false);
   // error message pop up
   const [showError, setShowError] = useState(true);
+  const [emoMode, setEmoMode] = useState(true);
+
+  //DarkMode toggle
+  const toggleDarkMode = () => {
+    setEmoMode(!emoMode);
+  };
 
   const toggleForm = () => {
     setShowContactForm(!showContactForm);
@@ -76,23 +80,35 @@ const Myspace: React.FC = (props: Props) => {
   }
 
   return (
-    <div className='flex w-screen justify-center bg-gray-200'>
+    <div
+      className={
+        emoMode
+          ? 'bg-checker flex w-screen justify-center'
+          : 'flex w-screen justify-center bg-gray-200'
+      }
+    >
       {showError && (
-        <div className='bg-error-overlay absolute z-40 flex h-screen w-screen justify-center '>
+        <div className='absolute z-40 flex h-screen w-screen justify-center  '>
           <Error toggleError={toggleError} errorMessage={generalError} />
         </div>
       )}
-      <div className='max-w-screen-lg flex-col bg-white min-h-[800px]'>
+      <div
+        className={
+          emoMode
+            ? 'min-h-[800px] max-w-screen-lg flex-col bg-black'
+            : 'min-h-[800px] max-w-screen-lg flex-col bg-white'
+        }
+      >
         {/* Header */}
-        <MyspaceHeader />
+        <MyspaceHeader darkMode={emoMode} toggleDarkMode={toggleDarkMode}/>
 
         <div className='flex justify-center'>
           {/* column 1  */}
           <div
             id='column-1'
-            className='flex h-screen min-h-[800px] w-5/12 min-w-[450px] flex-col items-center justify-start  pb-20'
+            className='flex h-screen min-h-[800px] w-5/12 min-w-[450px] flex-col items-center justify-start pb-20'
           >
-            <TitleCard />
+            <TitleCard darkMode={emoMode} />
             <Contact toggleForm={toggleForm} />
             {showContactForm && (
               <motion.div

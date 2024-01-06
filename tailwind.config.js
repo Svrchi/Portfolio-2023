@@ -14,7 +14,9 @@ module.exports = {
         Pixel: ['VT323'],
       },
       backgroundImage: {
-        'custom-gradient': 'linear-gradient(hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0) 50%, hsla(0, 0%, 0%, 0.3) 50%, hsla(0, 0%, 100%, 0.2))'
+        'custom-gradient':
+          'linear-gradient(hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0) 50%, hsla(0, 0%, 0%, 0.3) 50%, hsla(0, 0%, 100%, 0.2))',
+        'checker': "url('https://thumbs.dreamstime.com/b/checkerboard-chess-background-509139.jpg')",
       },
       colors: {
         'myspace-blue': '#6699cc',
@@ -27,7 +29,6 @@ module.exports = {
         'windows98-gray': '#bdc0bf',
         'windows98-border-gray': '#d6dadd',
         'windows98-blue': '#010186',
-
       },
       borderWidth: {
         inset: '10px 5px 10px 1px',

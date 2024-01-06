@@ -1,9 +1,12 @@
 import React from 'react';
 
-type Props = {};
+interface Props {
+  darkMode: boolean;
+  toggleDarkMode: () => void;
+}
 type menuItem = string;
 
-const MyspaceHeader = (props: Props) => {
+const MyspaceHeader: React.FC<Props> = ({ darkMode, toggleDarkMode }) => {
   const menuItems: menuItem[] = [
     'Home',
     '|',
@@ -21,7 +24,7 @@ const MyspaceHeader = (props: Props) => {
     '|',
     'About',
     '|',
-    'Art',
+    'Dark Mode',
   ];
 
   const renderMenu = () => {
@@ -29,7 +32,13 @@ const MyspaceHeader = (props: Props) => {
       const isSeparator = el === '|';
       const key = `${el}-${index}`;
       const separator = 'text-black';
-
+      if (el === 'Dark Mode') {
+        return (
+          <li key={key} className=''>
+            <button onClick={toggleDarkMode}>{el}</button>
+          </li>
+        );
+      }
       // Return an li element for both content and separator, but differentiate by class or other attributes
       return (
         <li key={key} className={isSeparator ? 'separator' : 'menu-item'}>

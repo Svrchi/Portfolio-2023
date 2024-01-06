@@ -3,14 +3,26 @@ import Image from 'next/image';
 import Link from 'next/link';
 import moment from 'moment';
 
-type Props = {};
+interface Props {
+  darkMode: boolean;
+}
 // const firstDateOfMonth = moment().startOf("month").format("MM-DD-YYYY");
 const currentDate = moment().subtract(7, 'days').calendar();
-const TitleCard = (props: Props) => {
+const TitleCard: React.FC<Props> = ({ darkMode }) => {
   return (
-    <div className='flex w-5/6 text-black pt-5 pb-7'>
+    <div
+      className={
+        darkMode
+          ? 'flex border-2 border-blue-600 pb-7 pt-5'
+          : 'flex w-5/6 pb-7 pt-5 text-black'
+      }
+    >
       <div id='left-col'>
-        <p className='font-bold'>Kevin Sarchi</p>
+        <p className={
+        darkMode
+          ? 'font-bold text-pink-600'
+          : 'font-bold'
+      }>Kevin Sarchi</p>
         {/* NEEDS WIDER PHOTO TO BALANCE SPACING */}
         <Image
           className='relative mx-auto object-cover '
