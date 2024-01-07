@@ -76,42 +76,54 @@ const Myspace: React.FC = (props: Props) => {
   }
 
   return (
-    <div className='flex w-screen justify-center bg-gray-200'>
+    <div className='flex h-screen min-h-[825px] w-screen justify-center bg-gray-200'>
+      { /*
+     TODO ----------------------------------- ERROR OVERLAY -----------------------------------
+     */}
       {showError && (
-        <div className='bg-error-overlay absolute z-40 flex h-screen w-screen justify-center '>
+        <div className='absolute z-40 flex h-screen min-h-[825px] w-screen justify-center bg-error-overlay'>
           <Error toggleError={toggleError} errorMessage={generalError} />
         </div>
       )}
-      <div className='max-w-screen-lg flex-col bg-white min-h-[800px]'>
-        {/* Header */}
+      { /*
+     TODO ----------------------------------- CONTACT FORM OVERLAY -----------------------------------
+     */}
+      {showContactForm && (
+        <div className='absolute z-40 flex h-screen min-h-[825px] w-screen justify-center bg-error-overlay'>
+          <ContactForm toggleForm={toggleForm} />
+        </div>
+      )}
+      { /* 
+      TODO ----------------------------------- WHITE CONTAINER -----------------------------------
+     */}
+      <div className='max-h-[850px] w-screen  max-w-screen-lg flex-col bg-white '>
         <MyspaceHeader />
-
-        <div className='flex justify-center'>
-          {/* column 1  */}
+        { /* 
+      TODO ----------------------------------- NAVIGATION -----------------------------------
+     */}
+       { /* 
+      TODO ----------------------------------- COLUMN CONTAINER -----------------------------
+     */}
+        <div className='relative flex h-full top-[-32px]'>
+          { /* 
+      TODO ----------------------------------- LEFT COLUMN  -----------------------------
+     */}
           <div
             id='column-1'
-            className='flex h-screen min-h-[800px] w-5/12 min-w-[450px] flex-col items-center justify-start  pb-20'
+            className='flex min-h-fit w-5/12 flex-col items-center justify-start mt-[32px]'
           >
             <TitleCard />
             <Contact toggleForm={toggleForm} />
-            {showContactForm && (
-              <motion.div
-                className='absolute left-0 top-12 z-20 flex h-screen w-screen items-center justify-center'
-                initial={{ y: -100, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 1 }}
-                viewport={{ once: true }}
-              >
-                <ContactForm toggleForm={toggleForm} />{' '}
-              </motion.div>
-            )}
-            <LinkedinURL />
-            <Interest />
+            <LinkedinURL/>
+            <Interest/>
+            
           </div>
+          { /* 
+      TODO ----------------------------------- RIGHT COLUMN  -----------------------------
+     */}
           <div
-            // Column 2
             id='column-2'
-            className='hidden h-screen min-h-[780px] w-7/12 justify-start pb-12 md:flex md:flex-col '
+            className='w-7/12 justify-start md:flex md:flex-col mt-[32px] pb-5'
           >
             <AboutMe />
             <TopSkills />

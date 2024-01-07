@@ -2,6 +2,8 @@ import React, { useRef } from 'react';
 import Image from 'next/image';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
+import { motion } from 'framer-motion';
+
 
 type Inputs = {
   name: string;
@@ -46,8 +48,18 @@ const ContactForm: React.FC<Props> = ({ toggleForm }) => {
   };
 
   return (
-    <div className='flex flex-col  h-[500px]  w-[580px] justify-start items-center bg-white shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]'>
-      <div className=' flex justify-end pt-0  w-full' onClick={toggleForm}>
+    <motion.div
+    className='absolute z-40 flex min-h-[825px] h-screen w-screen justify-center'
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{
+      duration: 0.8,
+      delay: 0.5,
+      ease: [0, 0.71, 0.2, 1.01],
+    }}
+  >
+    <div className='mt-32 flex h-[500px]  w-[580px]  flex-col items-center justify-start bg-white shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]'>
+      <div className=' flex w-full justify-end  pt-0' onClick={toggleForm}>
         <svg
           className='bg-blue-100 hover:bg-blue-200 active:bg-blue-300'
           xmlns='http://www.w3.org/2000/svg'
@@ -123,7 +135,7 @@ const ContactForm: React.FC<Props> = ({ toggleForm }) => {
             </div>
           </div>
           {/* body */}
-          <div className='flex h-48 w-full border ' >
+          <div className='flex h-48 w-full border '>
             <div className='w-1/6 pl-2 pt-2'>Body:</div>
             <div className='flex h-full w-5/6 items-center justify-center bg-white'>
               <textarea
@@ -134,7 +146,7 @@ const ContactForm: React.FC<Props> = ({ toggleForm }) => {
             </div>
           </div>
           {/* send */}
-          <div className='relative flex w-full bg-white h-0 top-2'>
+          <div className='relative top-2 flex h-0 w-full bg-white'>
             {/* bg-custom-gradient relative m-2 h-2 w-5 rounded-xl border-black pr-[40px] pt-[20px] font-bold text-white */}
             <button
               className='flex h-fit w-full items-end'
@@ -148,7 +160,7 @@ const ContactForm: React.FC<Props> = ({ toggleForm }) => {
                 height={0}
                 alt='button'
               />
-              <p className='relative right-[70px] top-2 z-40 self-start justify-self-start text-white [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] hover:text-gray-500 active:text-gray-600 bg'>
+              <p className='bg relative right-[70px] top-2 z-40 self-start justify-self-start text-white [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] hover:text-gray-500 active:text-gray-600'>
                 {' '}
                 Send
               </p>
@@ -157,12 +169,10 @@ const ContactForm: React.FC<Props> = ({ toggleForm }) => {
         </form>
       </div>
     </div>
+    </motion.div>
+    
+
   );
 };
 
 export default ContactForm;
-// display: inline-block;
-// position: relative;
-// background-color: #AAA;
-// [text-shadow:_0_0_5px hsla(0_0%_0_0%/_1)]
-// [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]

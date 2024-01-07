@@ -8,7 +8,7 @@ const Contact: React.FC<Props> = ({ toggleForm }) => {
   return (
     <div
       id='contact-container'
-      className='relative h-1/5 max-h-[165px] min-h-[150px] w-5/6 border-2 border-myspace-blue  mb-5'
+      className='relative mb-5 h-1/5 max-h-[165px] min-h-[150px] w-5/6 border-2 border-myspace-blue'
     >
       <div className='bg-myspace-blue '>
         <p className='pl-4 font-bold text-white '>Contacting Kevin</p>{' '}
@@ -107,7 +107,9 @@ const Contact: React.FC<Props> = ({ toggleForm }) => {
             </Link>
           </div>
         </div>
-        {/* //////////////////////////////////////////////////////////RIGHT SPAN //////////////////////////////////////////////////////// */}
+        {/* 
+      TODO ----------------------------------- RIGHT COLUMN -----------------------------------
+     */}
         <div className='relative left-1/2 flex w-1/2 flex-col justify-around '>
           <div className='ml-4 flex w-fit items-center hover:bg-gray-200 active:bg-gray-300'>
             <svg
@@ -175,14 +177,14 @@ const Contact: React.FC<Props> = ({ toggleForm }) => {
               Settings
             </Link>
           </div>
-          <div className='ml-4 flex w-fit items-center'>
+          <div className='ml-4 flex h-fit w-fit items-center'>
             <Link
               className='ml-2'
               href='https://www.youtube.com/watch?v=xvFZjo5PgG0'
               rel='noopener noreferrer'
               target='_blank'
             >
-              just here to fill space
+              just filler
             </Link>
           </div>
         </div>
