@@ -16,7 +16,7 @@ const Contact: React.FC<Props> = ({ toggleForm }) => {
       <div className='relative left-0 top-0 flex h-full max-h-[85%] w-full font-Pixel text-lg'>
         {/* //////////////////////////////////////////////////////////LEFT SPAN //////////////////////////////////////////////////////// */}
         <div className='absolute flex h-full w-1/2 flex-col justify-around'>
-          <div className='ml-4 flex w-fit items-center hover:bg-gray-200 active:bg-gray-300'>
+          <div className='ml-4 flex w-fit items-center hover:bg-slate-100 active:bg-gray-300'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width='20'
@@ -37,7 +37,7 @@ const Contact: React.FC<Props> = ({ toggleForm }) => {
               Send Message
             </button>
           </div>
-          <div className='ml-4 flex w-fit items-center hover:bg-gray-200 active:bg-gray-300'>
+          <div className='ml-4 flex w-fit items-center hover:bg-slate-100 active:bg-gray-300'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width='20'
@@ -60,7 +60,7 @@ const Contact: React.FC<Props> = ({ toggleForm }) => {
               Add to Friends
             </Link>
           </div>
-          <div className='ml-4 flex w-fit items-center hover:bg-gray-200 active:bg-gray-300'>
+          <div className='ml-4 flex w-fit items-center hover:bg-slate-100 active:bg-gray-300'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width='20'
@@ -85,7 +85,7 @@ const Contact: React.FC<Props> = ({ toggleForm }) => {
               Resume
             </Link>{' '}
           </div>
-          <div className='ml-4 flex w-fit items-center hover:bg-gray-200 active:bg-gray-300'>
+          <div className='ml-4 flex w-fit items-center hover:bg-slate-100 active:bg-gray-300'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width='20'
@@ -111,7 +111,7 @@ const Contact: React.FC<Props> = ({ toggleForm }) => {
       TODO ----------------------------------- RIGHT COLUMN -----------------------------------
      */}
         <div className='relative left-1/2 flex w-1/2 flex-col justify-around '>
-          <div className='ml-4 flex w-fit items-center hover:bg-gray-200 active:bg-gray-300'>
+          <div className='ml-4 flex w-fit items-center hover:bg-slate-100 active:bg-gray-300'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width='20'
@@ -132,7 +132,7 @@ const Contact: React.FC<Props> = ({ toggleForm }) => {
               Twitter
             </Link>
           </div>
-          <div className='ml-4 flex w-fit items-center hover:bg-gray-200 active:bg-gray-300'>
+          <div className='ml-4 flex w-fit items-center hover:bg-slate-100 active:bg-gray-300'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width='20'
@@ -155,7 +155,7 @@ const Contact: React.FC<Props> = ({ toggleForm }) => {
               Instagram
             </Link>{' '}
           </div>
-          <div className='ml-4 flex w-fit items-center hover:bg-gray-200 active:bg-gray-300'>
+          <div className='ml-4 flex w-fit items-center hover:bg-slate-100 active:bg-gray-300'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width='20'
